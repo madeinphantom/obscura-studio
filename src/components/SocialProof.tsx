@@ -3,6 +3,7 @@
 import React from 'react';
 import GlassCard from '@/components/GlassCard';
 import { Quote } from 'lucide-react';
+import GlassCTA from '@/components/GlassCTA';
 
 export default function SocialProof() {
   const testimonials = [
@@ -34,7 +35,7 @@ export default function SocialProof() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {testimonials.map((item, index) => (
             <GlassCard key={index} className="p-10 h-full bg-white/[0.02] hover:bg-white/[0.04] transition-colors duration-300">
                <div className="flex flex-col justify-between h-full">
@@ -57,6 +58,8 @@ export default function SocialProof() {
             </GlassCard>
           ))}
         </div>
+
+        <GlassCTA />
       </div>
     </section>
   );

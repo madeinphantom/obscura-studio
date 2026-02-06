@@ -14,11 +14,12 @@ const productLinks = [
   { label: 'Book a Call', href: '#booking' },
 ];
 
+// TODO: Add real social media links for LinkedIn and Instagram when available
 const socialLinks = [
-  { label: 'Twitter', href: 'https://x.com/nexusaihq', icon: Twitter },
-  { label: 'Instagram', href: 'https://instagram.com/nexusaihq', icon: Instagram },
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/nexusaihq', icon: Linkedin },
-  { label: 'Email', href: 'mailto:hello@obscuraai.xyz', icon: Mail },
+  { label: 'Twitter', href: 'https://x.com/madeinphantom', icon: Twitter },
+  { label: 'Instagram', href: 'https://x.com/madeinphantom', icon: Instagram },
+  { label: 'LinkedIn', href: 'https://x.com/madeinphantom', icon: Linkedin },
+  { label: 'Email', href: 'mailto:princeadza@gmail.com', icon: Mail },
 ];
 
 export default function GlassFooter({ className = '' }: GlassFooterProps) {
@@ -43,8 +44,7 @@ export default function GlassFooter({ className = '' }: GlassFooterProps) {
                   OBSCURA AI STUDIO
                 </h3>
                 <p className="text-lg text-white/50 font-light max-w-sm leading-relaxed">
-                  We build your AI backend. <br />
-                  You get your time back.
+                  We build custom AI systems, tools, and workflows that make you a 10x human. Automate the mundane and focus on what matters.
                 </p>
               </div>
               
@@ -89,10 +89,10 @@ export default function GlassFooter({ className = '' }: GlassFooterProps) {
                   Get in Touch
                 </h4>
                 <a 
-                  href="mailto:hello@obscuraai.xyz" 
+                  href="mailto:princeadza@gmail.com" 
                   className="text-sm text-white/60 hover:text-white transition-colors duration-300 tracking-wide block py-1"
                 >
-                  hello@obscuraai.xyz
+                  princeadza@gmail.com
                 </a>
               </div>
             </div>

@@ -25,7 +25,8 @@ export default function Booking() {
       </div>
       
       {/* Appointment Booking Embed */}
-      <GlassCard className="w-full max-w-4xl h-[700px] p-0 md:p-4 overflow-hidden shadow-2xl shadow-black/50">
+      {/* Adjust height using h-[Value] class below */}
+      <GlassCard className="w-full max-w-4xl h-[500px] p-0 md:p-4 overflow-hidden shadow-2xl shadow-black/50">
         <div className="w-full h-full rounded-2xl overflow-hidden bg-black/20">
           <Cal 
             namespace="discovery-call"

@@ -2,6 +2,7 @@ import React from "react";
 import { Check } from "lucide-react";
 import PortalCard from "@/components/PortalCard";
 import ServiceDeepDive from "@/components/ServiceDeepDive";
+import GlassCTA from "@/components/GlassCTA";
 
 export default function Services() {
   const services = [
@@ -109,6 +110,7 @@ export default function Services() {
             </div>
           </div>
         </div>
+        <GlassCTA />
       </div>
     </section>
   );

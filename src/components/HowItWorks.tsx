@@ -1,6 +1,7 @@
 import React from "react";
 import { Phone, Code, Rocket } from "lucide-react";
 import GlassCard from "@/components/GlassCard";
+import GlassCTA from '@/components/GlassCTA';
 
 export default function HowItWorks() {
   const steps = [
@@ -35,11 +36,13 @@ export default function HowItWorks() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Connecting Line (Desktop) - Adjusted for dark mode */}
+           {/* ... steps grid */}
+           {/* Connecting Line (Desktop) - Adjusted for dark mode */}
           <div className="hidden md:block absolute top-[2.5rem] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
           
           {steps.map((item, index) => (
-            <GlassCard key={index} className="p-8 flex flex-col items-start relative z-10 h-full group hover:bg-white/[0.02] transition-colors duration-300">
+             <GlassCard key={index} className="p-8 flex flex-col items-start relative z-10 h-full group hover:bg-white/[0.02] transition-colors duration-300">
+               {/* ... card content */}
                <div className="w-20 h-20 rounded-2xl bg-white/5 backdrop-blur-md flex items-center justify-center mb-8 border border-white/10 shadow-lg group-hover:bg-[#b7d1ea]/10 group-hover:border-[#b7d1ea]/30 transition-all duration-300">
                  {/* @ts-expect-error - Lucide icons pass props but TS is strict about ReactElement */}
                  {React.cloneElement(item.icon as React.ReactElement, { className: "w-8 h-8 text-white group-hover:text-[#b7d1ea] transition-colors duration-300" })}
@@ -52,6 +55,8 @@ export default function HowItWorks() {
             </GlassCard>
           ))}
         </div>
+
+        <GlassCTA className="mt-16" />
       </div>
     </section>
   );

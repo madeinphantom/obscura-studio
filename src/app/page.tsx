@@ -13,9 +13,9 @@ export default function Home() {
       <GlassHeader />
       <Hero />
       <PainPoints />
+      <SocialProof />
       <Services />
       <HowItWorks />
-      <SocialProof />
       <Booking />
       <GlassFooter />
     </main>
