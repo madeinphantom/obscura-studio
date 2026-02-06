@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
+import GlassCard from "@/components/GlassCard";
 
 export default function Booking() {
   useEffect(() => {
@@ -12,7 +13,7 @@ export default function Booking() {
   }, []);
 
   return (
-    <section id="booking" className="py-32 px-6 md:px-12 min-h-screen flex flex-col items-center justify-center text-center">
+    <section id="booking" className="py-24 px-6 md:px-12 min-h-screen flex flex-col items-center justify-center text-center">
       <div className="max-w-3xl mx-auto space-y-8 mb-16">
         <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
           <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">Let&apos;s Talk</span>
@@ -24,14 +25,16 @@ export default function Booking() {
       </div>
       
       {/* Appointment Booking Embed */}
-      <div className="w-full max-w-4xl bg-white rounded-xl h-[700px] overflow-hidden shadow-2xl shadow-black/50 border border-white/10 relative flex items-center justify-center bg-black/40 backdrop-blur-sm">
-        <Cal 
-          namespace="discovery-call"
-          calLink="prince-adza-sirlwt/discovery-call"
-          style={{width:"100%",height:"100%",overflow:"scroll"}}
-          config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}}
-        />
-      </div>
+      <GlassCard className="w-full max-w-4xl h-[700px] p-0 md:p-4 overflow-hidden shadow-2xl shadow-black/50">
+        <div className="w-full h-full rounded-2xl overflow-hidden bg-black/20">
+          <Cal 
+            namespace="discovery-call"
+            calLink="prince-adza-sirlwt/discovery-call"
+            style={{width:"100%",height:"100%",overflow:"scroll"}}
+            config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}}
+          />
+        </div>
+      </GlassCard>
     </section>
   );
 }
