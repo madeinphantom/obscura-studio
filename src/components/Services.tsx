@@ -81,6 +81,56 @@ export default function Services() {
             </PortalCard>
           ))}
         </div>
+
+        {/* Creative Studio Cross-Sell */}
+        <div className="relative p-[1px] rounded-3xl overflow-hidden group mb-12 border border-white/10 bg-white/5 backdrop-blur-md">
+          <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+          
+          <div className="relative rounded-[23px] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+             <div className="flex items-center gap-4">
+               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
+                 <span className="text-xl">✨</span>
+               </div>
+               <div>
+                 <h3 className="text-xl font-bold text-white text-left tracking-tight">Looking for AI-powered creative assets?</h3>
+                 <p className="text-white/60 text-left font-light">Product mockups, ad creatives, and video ads — delivered same-day.</p>
+               </div>
+             </div>
+
+             <a 
+               href="/creative-studio"
+               className="whitespace-nowrap px-6 py-3 border border-white/20 hover:bg-white text-white hover:text-black font-semibold rounded-full transition-colors flex items-center gap-2 uppercase text-sm tracking-wide"
+             >
+               Explore the Creative Studio
+               <span className="group-hover:translate-x-1 transition-transform">→</span>
+             </a>
+          </div>
+        </div>
+
+        {/* Creative Studio Cross-Sell */}
+        <div className="relative p-[1px] rounded-3xl overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-r from-violet-500/50 via-indigo-500/50 to-violet-500/50 opacity-50 group-hover:opacity-100 transition-opacity" />
+          
+          <div className="relative bg-[#0A0A0A] rounded-[23px] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+             <div className="flex items-center gap-4">
+               <div className="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center border border-violet-500/30">
+                 <span className="text-xl">✨</span>
+               </div>
+               <div>
+                 <h3 className="text-xl font-bold text-white">Looking for AI-powered creative assets?</h3>
+                 <p className="text-neutral-400">Product mockups, ad creatives, and video ads — delivered same-day.</p>
+               </div>
+             </div>
+
+             <a 
+               href="/creative-studio"
+               className="whitespace-nowrap px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-neutral-200 transition-colors flex items-center gap-2 group-hover:scale-105 duration-200"
+             >
+               Explore the Creative Studio
+               <span className="group-hover:translate-x-1 transition-transform">→</span>
+             </a>
+          </div>
+        </div>
         
 
          {/* Detailed Breakdown */}

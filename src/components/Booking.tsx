@@ -23,6 +23,20 @@ export default function Booking() {
           Book a free 30-minute discovery call. We&apos;ll talk about your business, identify quick wins, and give you an honest assessment of where AI fits. No commitment. No pressure.
         </p>
       </div>
+
+      {/* Creative Studio Cross-Sell */}
+      <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <a 
+          href="/creative-studio" 
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+        >
+          <span className="w-2 h-2 rounded-full bg-[#b7d1ea] animate-pulse" />
+          <span className="text-sm font-medium text-white/80">
+            Now offering AI Creative Studio — mockups, ads & video at AI speed.
+          </span>
+          <span className="text-white/80 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
       
       {/* Appointment Booking Embed */}
       {/* Adjust height using h-[Value] class below */}
