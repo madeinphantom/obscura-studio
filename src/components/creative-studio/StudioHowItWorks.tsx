@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     label: "The Download",
-    description: "30 minutes. We extract your brand DNA, goals, and constraints. You speak; we structure.",
+    description: "We extract your brand DNA, goals, and constraints in a 30-minute deep dive. You speak; we structure.",
     number: "01"
   },
   {
@@ -16,7 +16,7 @@ const steps = [
   },
   {
     label: "The Launch",
-    description: "Assets delivered ready-to-ship. Optimized for platform. Calibrated for conversion.",
+    description: "Assets delivered in 24 hours. Optimized for platform. Calibrated for conversion. Ready to ship.",
     number: "03"
   }
 ];

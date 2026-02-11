@@ -35,10 +35,10 @@ export default function StudioHero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9] text-white mb-6 max-w-5xl mx-auto"
         >
-          The New Standard for
+          The Creative Engine for
           <br />
           <span style={{ color: '#b7d1ea' }}>
-            Creative Velocity.
+            High-Velocity Brands.
           </span>
         </motion.h1>
 
@@ -49,7 +49,7 @@ export default function StudioHero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
         >
-          For the founders and brands who refuse to wait. Studio-grade assets, delivered at the speed of thought.
+          For founders who refuse to wait. We replace the agency bottleneck with an always-on creative engine. Studio-grade assets, delivered same-day.
         </motion.p>
 
         {/* CTA */}
@@ -62,7 +62,7 @@ export default function StudioHero() {
             onClick={() => scrollToSection('creative-booking')}
             className="px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide uppercase hover:bg-[#b7d1ea] transition-colors duration-300 rounded-full"
           >
-            Book a Creative Brief Call
+            Book Your Briefing
           </button>
         </motion.div>
 

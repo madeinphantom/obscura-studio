@@ -26,7 +26,7 @@ export default function StudioPricing() {
             <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">Investment</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tighter">
-            Clear pricing. Exponential value.
+            Simple Pricing. Infinite Leverage.
           </h2>
         </div>
 
@@ -81,7 +81,7 @@ export default function StudioPricing() {
                  Need a relentless creative partner?
                </h3>
                <p className="text-white/60 max-w-xl font-light">
-                 Stop paying per pixel. Start investing in flow. <span className="text-white font-medium">£800/month subscription</span> gives you an in-house studio for less than a single hire.
+                 An entire creative studio for less than the cost of one hire. <span className="text-white font-medium">£800/month subscription</span> gives you an in-house studio. No overhead. No management. Just flow.
                </p>
              </div>
 

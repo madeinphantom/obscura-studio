@@ -26,16 +26,30 @@ export default function StudioCTA() {
             Your unfair advantage awaits.
           </h2>
 
-          <p className="text-xl text-white/60 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-            One brief. Same-day delivery. Assets that actually convert.
-          </p>
+          <div className="max-w-xl mx-auto mb-10 text-left space-y-6">
+            <div className="flex gap-4">
+               <span className="text-[#b7d1ea] font-mono">01</span>
+               <p className="text-white/80 font-light">We extract your brand DNA and goals in a 30-minute deep dive.</p>
+            </div>
+            <div className="flex gap-4">
+               <span className="text-[#b7d1ea] font-mono">02</span>
+               <p className="text-white/80 font-light">Our pipeline generates, filters, and refines your assets.</p>
+            </div>
+            <div className="flex gap-4">
+               <span className="text-[#b7d1ea] font-mono">03</span>
+               <p className="text-white/80 font-light">You receive studio-grade creative. Ready to launch.</p>
+            </div>
+          </div>
 
           <button 
             onClick={() => scrollToSection('creative-booking')}
             className="px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide uppercase hover:bg-[#b7d1ea] transition-colors duration-300 rounded-full"
           >
-            Start the Brief
+            Let's Build 
           </button>
+          <p className="mt-6 text-xs text-white/30 uppercase tracking-widest">
+            Premium Design. AI Speed.
+          </p>
 
         </motion.div>
 
