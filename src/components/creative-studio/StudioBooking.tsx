@@ -44,7 +44,7 @@ export default function StudioBooking() {
         <div className="w-full h-full rounded-2xl overflow-hidden bg-black/20">
           <Cal
             namespace="creative-studio-discovery"
-            calLink="prince-adza-sirlwt/creative-studio-discovery"
+            calLink="obscura-xyz-sirlwt/creative-studio-discovery"
             style={{ width: "100%", height: "100%", overflow: "scroll" }}
             config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
           />

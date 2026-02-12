@@ -17,9 +17,9 @@ const productLinks = [
 // TODO: Add real social media links for LinkedIn and Instagram when available
 const socialLinks = [
   { label: 'Twitter', href: 'https://x.com/madeinphantom', icon: Twitter },
-  { label: 'Instagram', href: 'https://x.com/madeinphantom', icon: Instagram },
+  { label: 'Instagram', href: 'https://x.com/obscuraxyz', icon: Instagram },
   { label: 'LinkedIn', href: 'https://x.com/madeinphantom', icon: Linkedin },
-  { label: 'Email', href: 'mailto:princeadza@gmail.com', icon: Mail },
+  { label: 'Email', href: 'mailto:prince@obscuraai.xyz', icon: Mail },
 ];
 
 export default function GlassFooter({ className = '' }: GlassFooterProps) {
@@ -89,10 +89,10 @@ export default function GlassFooter({ className = '' }: GlassFooterProps) {
                   Get in Touch
                 </h4>
                 <a 
-                  href="mailto:princeadza@gmail.com" 
+                  href="mailto:prince@obscuraai.xyz" 
                   className="text-sm text-white/60 hover:text-white transition-colors duration-300 tracking-wide block py-1"
                 >
-                  princeadza@gmail.com
+                  prince@obscuraai.xyz
                 </a>
               </div>
             </div>

@@ -44,7 +44,7 @@ export default function Booking() {
         <div className="w-full h-full rounded-2xl overflow-hidden bg-black/20">
           <Cal 
             namespace="discovery-call"
-            calLink="prince-adza-sirlwt/discovery-call"
+            calLink="obscura-xyz-sirlwt/discovery-call"
             style={{width:"100%",height:"100%",overflow:"scroll"}}
             config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}}
           />
