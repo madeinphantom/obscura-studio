@@ -8,8 +8,8 @@ export default function HowItWorks() {
     {
       icon: <Phone className="w-6 h-6 text-black" />,
       step: "01",
-      title: "Discovery Call",
-      description: "30 minutes. No pitch, no pressure. We learn about your business, your pain points, and where AI can make the biggest impact. You walk away with a clear plan, whether you hire us or not."
+      title: "Strategy Call",
+      description: "We discuss your bottlenecks and identify high-value AI opportunities. We learn about your business logic, and you walk away with a clear plan."
     },
     {
       icon: <Code className="w-6 h-6 text-black" />,

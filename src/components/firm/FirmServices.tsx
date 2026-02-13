@@ -29,7 +29,7 @@ export default function FirmServices() {
         "Competitive intelligence",
         "Agent orchestration",
       ],
-      cta: "Book a Discovery Call",
+      cta: "Book a Free Strategy Call",
       onClick: scrollToBooking,
       gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/20",
     },
@@ -78,7 +78,7 @@ export default function FirmServices() {
             Join The AI Race Now.
           </h2>
           <p className="text-lg text-white/50 font-light max-w-2xl">
-            One firm. Three ways to work with us; depending on what you need and how fast you need it.
+            One firm. Three ways to work with us, depending on what you need and how fast you need it.
           </p>
         </div>
 

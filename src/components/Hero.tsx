@@ -33,7 +33,7 @@ export default function Hero() {
              onClick={() => scrollToSection('booking')}
              className="px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide uppercase hover:bg-[#b7d1ea] transition-colors duration-300"
            >
-             Book a Free Discovery Call
+             Book a Free Strategy Call
            </button>
            <button 
              onClick={() => scrollToSection('how-it-works')}

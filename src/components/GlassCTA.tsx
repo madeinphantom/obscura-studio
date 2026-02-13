@@ -12,7 +12,7 @@ interface GlassCTAProps {
 
 export default function GlassCTA({ 
   className = '', 
-  text = "Book a Discovery Call", 
+  text = "Book a Free Strategy Call", 
   href = "#booking" 
 }: GlassCTAProps) {
   return (

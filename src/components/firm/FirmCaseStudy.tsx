@@ -17,7 +17,7 @@ export default function FirmCaseStudy() {
   const obscura = [
     "Single brief → automated pipeline",
     "Infinite variations generated in parallel",
-    "First asset: under 48 hour",
+    "First asset: under 48 hours",
     "Every iteration brand-locked by default"
   ];
 

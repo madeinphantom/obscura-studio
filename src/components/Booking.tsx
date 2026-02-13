@@ -28,7 +28,7 @@ export default function Booking() {
         </div>
         <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">Ready to see what AI can do for you?</h2>
         <p className="text-xl text-white/60 font-light leading-relaxed max-w-2xl mx-auto">
-          Book a free 30-minute discovery call. We&apos;ll talk about your business, identify quick wins, and give you an honest assessment of where AI fits. No commitment or pressure.
+          Book a free 30 minute strategy call. We&apos;ll talk about your business, identify quick wins, and give you an honest assessment of where AI fits. No commitment. No pressure.
         </p>
       </div>
 
