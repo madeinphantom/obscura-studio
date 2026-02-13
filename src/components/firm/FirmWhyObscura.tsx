@@ -17,7 +17,7 @@ export default function FirmWhyObscura() {
     {
       icon: <Bot className="w-8 h-8 text-[#b7d1ea]" />,
       title: "Hiring might not solve this.",
-      description: "Adding headcount means months to onboard, £150k+ per hire, and the same manual bottlenecks at a higher cost."
+      description: "Adding headcount means months to onboard, $200k+ per hire, and the same manual bottlenecks at a higher cost."
     }
   ];
 

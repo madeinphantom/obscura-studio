@@ -3,9 +3,9 @@
 import React from 'react';
 
 const pricingData = [
-  { service: "The Infinite Studio", price: "£1,000", unit: "/batch", delivery: "24 hours" },
-  { service: "Performance Architecture", price: "£1,500", unit: "/project", delivery: "48 hours" },
-  { service: "Motion at Scale", price: "£2,000", unit: "/project", delivery: "72 hours" },
+  { service: "The Infinite Studio", price: "$1,500", unit: "/batch", delivery: "24 hours" },
+  { service: "Performance Architecture", price: "$2,000", unit: "/project", delivery: "48 hours" },
+  { service: "Motion at Scale", price: "$3,000", unit: "/project", delivery: "72 hours" },
 ];
 
 export default function StudioPricing() {
@@ -84,7 +84,7 @@ export default function StudioPricing() {
                  Need a relentless creative partner?
                </h3>
                 <p className="text-white/60 max-w-xl font-light">
-                  An entire creative studio for less than the cost of one hire. <span className="text-white font-medium">£1,250/month subscription</span> gives you unlimited creative capacity. No overhead. No management. Just flow.
+                   An entire creative studio for less than the cost of one hire. <span className="text-white font-medium">$1,500/month subscription</span> gives you unlimited creative capacity. No overhead. No management. Just flow.
                 </p>
              </div>
 

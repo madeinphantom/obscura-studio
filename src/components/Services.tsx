@@ -18,7 +18,7 @@ export default function Services() {
     {
       title: "Workflow Automation",
       tagline: "Stop doing what a machine can do for you.",
-      price: "From £3,500",
+      price: "From $5,000",
       description: "We audit how you work and build AI-powered automations that handle the repetitive stuff: email triage, scheduling, data entry, client follow-ups, and reporting.",
       layer: "STARTER",
       details: [
@@ -31,7 +31,7 @@ export default function Services() {
     {
       title: "Document & Data Intelligence",
       tagline: "Your files, finally organised and searchable.",
-      price: "From £3,500",
+      price: "From $5,000",
       layer: "INTERMEDIATE",
       details: [
         "Structured knowledge base",
@@ -43,7 +43,7 @@ export default function Services() {
     {
       title: "Custom AI Tools",
       tagline: "Built for your business. By us. In a week or less.",
-      price: "From £5,000",
+      price: "From $7,500",
       layer: "MOST POPULAR",
       details: [
         "Custom dashboards",
@@ -143,7 +143,7 @@ export default function Services() {
               </p>
             </div>
             <div className="text-right shrink-0">
-               <p className="text-4xl font-light text-[#b7d1ea]">£400<span className="text-lg text-white/40 font-normal">/mo</span></p>
+               <p className="text-4xl font-light text-[#b7d1ea]">$500<span className="text-lg text-white/40 font-normal">/mo</span></p>
             </div>
           </div>
         </div>

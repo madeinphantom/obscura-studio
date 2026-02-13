@@ -8,7 +8,7 @@ import GlassCTA from '@/components/GlassCTA';
 
 export default function FirmAnchor() {
   const [count, setCount] = useState(0);
-  const targetAmount = 150000;
+  const targetAmount = 200000;
 
   useEffect(() => {
     const duration = 4000; // 4 seconds
@@ -30,11 +30,11 @@ export default function FirmAnchor() {
   }, []);
 
   const socialProof = [
-    "Skipped a £120k hire. ROI in month one.",
+    "Skipped a $150k hire. ROI in month one.",
     "Streamlined research from 2 days to 2 hours.",
     "Saved 15 hours/week across the team.",
     "Deployed in 48 hours. Zero training needed.",
-    "Reclaimed £8k/month in lost capacity."
+    "Reclaimed $10k/month in lost capacity."
   ];
 
   const testimonials = [
@@ -83,7 +83,7 @@ export default function FirmAnchor() {
                 <h3 className="text-lg font-medium text-white/60 uppercase tracking-wide">Build Internally / Hire</h3>
                 <div className="space-y-2">
                   <div className="text-5xl md:text-6xl font-bold text-white/90">
-                    £{count.toLocaleString()}<span className="text-2xl text-white/40">/year</span>
+                    ${count.toLocaleString()}<span className="text-2xl text-white/40">/year</span>
                   </div>
                   <div className="text-xl text-white/50">6 months</div>
                 </div>

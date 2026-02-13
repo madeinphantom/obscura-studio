@@ -9,21 +9,21 @@ const services = [
     title: "The Infinite Studio",
     tagline: "Your product, in any context.",
     description: "Send us your raw product photos. We generate studio-grade mockups across any environment. Infinite variations. Zero reshoots.",
-    price: "From £1,000",
+    price: "From $1,500",
     layer: "RAPID"
   },
   {
     title: "Performance Architecture",
     tagline: "Ads built on data, not guesses.",
     description: "Static ads and carousels built on proven frameworks. We reverse-engineer what works, swap in your brand, and ship creative that compounds.",
-    price: "From £1,500",
+    price: "From $2,000",
     layer: "SCALABLE"
   },
   {
     title: "Motion at Scale",
     tagline: "Broadcast quality for the feed.",
     description: "Short-form video ads (15-30s) built programmatically. Kinetic typography, motion graphics, and product showcases. Captivate in seconds.",
-    price: "From £2,000",
+    price: "From $3,000",
     layer: "HIGH IMPACT"
   }
 ];
