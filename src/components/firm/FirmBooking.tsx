@@ -5,7 +5,7 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import GlassCard from "@/components/GlassCard";
 import { calConfig } from "@/lib/config/cal";
 
-export default function Booking() {
+export default function FirmBooking() {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: calConfig.namespace });
@@ -26,24 +26,10 @@ export default function Booking() {
         <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
           <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">Let&apos;s Talk</span>
         </div>
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">Ready to see what AI can do for you?</h2>
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">Ready to deploy intelligence?</h2>
         <p className="text-xl text-white/60 font-light leading-relaxed max-w-2xl mx-auto">
-          Book a free 30-minute discovery call. We&apos;ll talk about your business, identify quick wins, and give you an honest assessment of where AI fits. No commitment or pressure.
+          Book a complimentary strategy session. We&apos;ll audit your current workflow and map out exactly where AI adds the most leverage. Actionable roadmap, guaranteed.
         </p>
-      </div>
-
-      {/* Creative Studio Cross-Sell */}
-      <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-        <a 
-          href="/creative-studio" 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
-        >
-          <span className="w-2 h-2 rounded-full bg-[#b7d1ea] animate-pulse" />
-          <span className="text-sm font-medium text-white/80">
-            Now offering AI Creative Studio — mockups, ads & video at AI speed.
-          </span>
-          <span className="text-white/80 group-hover:translate-x-1 transition-transform">→</span>
-        </a>
       </div>
       
       {/* Appointment Booking Embed */}

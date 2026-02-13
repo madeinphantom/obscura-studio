@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 
 export default function StudioHero() {
   const scrollToSection = (id: string) => {
@@ -12,61 +11,36 @@ export default function StudioHero() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+    <section id="hero" className="flex flex-col items-start justify-end min-h-screen px-6 pb-24 md:px-12 md:pb-32 text-left max-w-[100vw] overflow-hidden relative">
       
-      <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
-        
-        {/* Badge */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8"
-        >
-          <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">
-            OBSCURA / STUDIO
-          </span>
-        </motion.div>
-
-        {/* Headline */}
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9] text-white mb-6 max-w-5xl mx-auto"
-        >
-          The Creative Engine for
-          <br />
-          <span style={{ color: '#b7d1ea' }}>
-            High-Velocity Brands.
-          </span>
-        </motion.h1>
-
-        {/* Subheadline */}
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
-        >
-          For founders who refuse to wait. We replace the agency bottleneck with an always-on creative engine. Studio-grade assets, delivered same-day.
-        </motion.p>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <button 
-            onClick={() => scrollToSection('creative-booking')}
-            className="px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide uppercase hover:bg-[#b7d1ea] transition-colors duration-300 rounded-full"
-          >
-            Book Your Briefing
-          </button>
-        </motion.div>
-
+      {/* Badge */}
+      <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
+        <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">
+          OBSCURA / CREATIVE STUDIO
+        </span>
       </div>
+
+      {/* Headline */}
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[0.9] text-white mb-6 max-w-5xl">
+        The Creative Engine For
+        <br />
+        High-Velocity Brands.
+
+      </h1>
+
+      {/* Subheadline */}
+      <p className="text-lg md:text-xl text-white/60 max-w-2xl mb-10 leading-relaxed font-light">
+        Product mockups, ad creatives, and programmatic video: delivered instantly. No agencies. No retainers. No waiting.
+      </p>
+
+      {/* CTA */}
+      <button 
+        onClick={() => scrollToSection('creative-booking')}
+        className="px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide uppercase hover:bg-[#b7d1ea] transition-colors duration-300"
+      >
+        Book Free Creative Brief
+      </button>
+
     </section>
   );
 }

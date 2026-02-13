@@ -45,7 +45,7 @@ export default function StudioCTA() {
             onClick={() => scrollToSection('creative-booking')}
             className="px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide uppercase hover:bg-[#b7d1ea] transition-colors duration-300 rounded-full"
           >
-            Let's Build 
+            Let&apos;s Build 
           </button>
           <p className="mt-6 text-xs text-white/30 uppercase tracking-widest">
             Premium Design. AI Speed.

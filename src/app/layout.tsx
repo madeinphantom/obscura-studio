@@ -10,23 +10,23 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  title: "Obscura AI Studio — AI Workflows & Automation for Your Business",
+  title: "Obscura AI — Research Intelligence, Deployed",
   description:
-    "We build custom AI workflows, automations, and dashboards for businesses. Book a free discovery call today.",
+    "We build intelligence systems that research, extract, and reason — so you don't have to. Document processing. Deal research. Agent systems.",
   openGraph: {
-    title: "Obscura AI Studio — AI Workflows & Automation for Your Business",
+    title: "Obscura AI — Research Intelligence, Deployed",
     description:
-      "We build custom AI workflows, automations, and dashboards for businesses. Book a free discovery call today.",
+      "Intelligence systems that research, extract, and reason. Document processing. Deal research. Agent systems.",
     url: "https://obscuraai.studio",
-    siteName: "Obscura AI Studio",
+    siteName: "Obscura AI",
     locale: "en_GB",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Obscura AI Studio — AI Workflows & Automation for Your Business",
+    title: "Obscura AI — Research Intelligence, Deployed",
     description:
-      "We build custom AI workflows, automations, and dashboards for businesses. Book a free discovery call today.",
+      "Intelligence systems that research, extract, and reason. Document processing. Deal research. Agent systems.",
   },
   robots: {
     index: true,
@@ -43,7 +43,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${libreBaskerville.variable} font-serif antialiased bg-black text-white`}>
         <div className="fixed inset-0 z-0 w-full h-full pointer-events-none">
-          {/* @ts-ignore - Beams is a jsx component */}
           <Beams
             beamWidth={2.5}
             beamHeight={20}

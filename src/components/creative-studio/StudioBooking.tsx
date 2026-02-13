@@ -3,18 +3,19 @@
 import React, { useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import GlassCard from "@/components/GlassCard";
+import { creativeStudioCalConfig } from "@/lib/config/cal";
 
 export default function StudioBooking() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "creative-studio-discovery" });
+      const cal = await getCalApi({ namespace: creativeStudioCalConfig.namespace });
       cal("ui", {
         cssVarsPerTheme: {
-          light: { "cal-brand": "#b7d1ea" },
-          dark: { "cal-brand": "#000000" },
+          light: { "cal-brand": creativeStudioCalConfig.brand.light },
+          dark: { "cal-brand": creativeStudioCalConfig.brand.dark },
         },
-        hideEventTypeDetails: false,
-        layout: "month_view",
+        hideEventTypeDetails: creativeStudioCalConfig.ui.hideEventTypeDetails,
+        layout: creativeStudioCalConfig.ui.layout,
       });
     })();
   }, []);
@@ -34,7 +35,7 @@ export default function StudioBooking() {
           Initialize Studio.
         </h2>
         <p className="text-xl text-white/60 font-light leading-relaxed max-w-2xl mx-auto">
-          Book your 30-minute creative brief call. We'll clarify your needs and
+          Book your 30-minute creative brief call. We&apos;ll clarify your needs and
           start building immediately.
         </p>
       </div>
@@ -43,10 +44,10 @@ export default function StudioBooking() {
       <GlassCard className="w-full max-w-4xl h-[500px] p-0 md:p-4 overflow-hidden shadow-2xl shadow-black/50 border-white/10">
         <div className="w-full h-full rounded-2xl overflow-hidden bg-black/20">
           <Cal
-            namespace="creative-studio-discovery"
-            calLink="obscura-xyz-sirlwt/creative-studio-discovery"
+            namespace={creativeStudioCalConfig.namespace}
+            calLink={creativeStudioCalConfig.calLink}
             style={{ width: "100%", height: "100%", overflow: "scroll" }}
-            config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
+            config={{ layout: creativeStudioCalConfig.ui.layout, useSlotsViewOnSmallScreen: "true" }}
           />
         </div>
       </GlassCard>

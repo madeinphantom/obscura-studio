@@ -32,7 +32,7 @@ export default function HowItWorks() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
             <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">How It Works</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">From first call to fully built.<br />Here's how it works.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">From first call to fully built.<br />Here&apos;s how it works.</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">

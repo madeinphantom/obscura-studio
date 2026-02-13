@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { Check } from "lucide-react";
 import PortalCard from "@/components/PortalCard";
@@ -5,11 +7,18 @@ import ServiceDeepDive from "@/components/ServiceDeepDive";
 import GlassCTA from "@/components/GlassCTA";
 
 export default function Services() {
+  const scrollToBooking = () => {
+    const element = document.getElementById('booking');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const services = [
     {
       title: "Workflow Automation",
       tagline: "Stop doing what a machine can do for you.",
-      price: "£2,500",
+      price: "From £3,500",
       description: "We audit how you work and build AI-powered automations that handle the repetitive stuff: email triage, scheduling, data entry, client follow-ups, and reporting.",
       layer: "STARTER",
       details: [
@@ -22,7 +31,7 @@ export default function Services() {
     {
       title: "Document & Data Intelligence",
       tagline: "Your files, finally organised and searchable.",
-      price: "£2,500",
+      price: "From £3,500",
       layer: "INTERMEDIATE",
       details: [
         "Structured knowledge base",
@@ -33,8 +42,8 @@ export default function Services() {
     },
     {
       title: "Custom AI Tools",
-      tagline: "Built for your business. By us. In a day.",
-      price: "£5,000",
+      tagline: "Built for your business. By us. In a week or less.",
+      price: "From £5,000",
       layer: "MOST POPULAR",
       details: [
         "Custom dashboards",
@@ -53,6 +62,9 @@ export default function Services() {
             <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">What We Do</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">Three ways we put AI to work for you.</h2>
+          <p className="text-white/60 text-lg font-light max-w-2xl">
+            Click any service to start your journey.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -66,6 +78,7 @@ export default function Services() {
               className="h-full min-h-[600px]"
               gradient={index === 1 ? "from-blue-400/50 to-indigo-600/20" : "from-[#b7d1ea]/55 to-[#b7d1ea]/55"}
               actionIcon={<Check className="w-5 h-5" />}
+              onClick={scrollToBooking}
             >
               <div className="mb-6">
                 <p className="text-sm font-medium text-[#b7d1ea]">{service.tagline}</p>
@@ -99,39 +112,13 @@ export default function Services() {
 
              <a 
                href="/creative-studio"
-               className="whitespace-nowrap px-6 py-3 border border-white/20 hover:bg-white text-white hover:text-black font-semibold rounded-full transition-colors flex items-center gap-2 uppercase text-sm tracking-wide"
+               className="whitespace-nowrap px-6 py-3 border border-white/20 bg-[#b7d1ea]/30 hover:bg-white text-white hover:text-black font-semibold rounded-full transition-colors flex items-center gap-2 uppercase text-sm tracking-wide"
              >
                Explore the Creative Studio
                <span className="group-hover:translate-x-1 transition-transform">→</span>
              </a>
           </div>
         </div>
-
-        {/* Creative Studio Cross-Sell */}
-        <div className="relative p-[1px] rounded-3xl overflow-hidden group">
-          <div className="absolute inset-0 bg-gradient-to-r from-violet-500/50 via-indigo-500/50 to-violet-500/50 opacity-50 group-hover:opacity-100 transition-opacity" />
-          
-          <div className="relative bg-[#0A0A0A] rounded-[23px] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-             <div className="flex items-center gap-4">
-               <div className="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center border border-violet-500/30">
-                 <span className="text-xl">✨</span>
-               </div>
-               <div>
-                 <h3 className="text-xl font-bold text-white">Looking for AI-powered creative assets?</h3>
-                 <p className="text-neutral-400">Product mockups, ad creatives, and video ads — delivered same-day.</p>
-               </div>
-             </div>
-
-             <a 
-               href="/creative-studio"
-               className="whitespace-nowrap px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-neutral-200 transition-colors flex items-center gap-2 group-hover:scale-105 duration-200"
-             >
-               Explore the Creative Studio
-               <span className="group-hover:translate-x-1 transition-transform">→</span>
-             </a>
-          </div>
-        </div>
-        
 
          {/* Detailed Breakdown */}
         <ServiceDeepDive />
@@ -156,7 +143,7 @@ export default function Services() {
               </p>
             </div>
             <div className="text-right shrink-0">
-               <p className="text-4xl font-light text-[#b7d1ea]">£300<span className="text-lg text-white/40 font-normal">/mo</span></p>
+               <p className="text-4xl font-light text-[#b7d1ea]">£400<span className="text-lg text-white/40 font-normal">/mo</span></p>
             </div>
           </div>
         </div>

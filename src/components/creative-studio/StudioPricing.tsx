@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 
 const pricingData = [
-  { service: "The Infinite Studio", price: "£500", unit: "/batch", delivery: "Same day" },
-  { service: "Performance Architecture", price: "£1,000", unit: "/project", delivery: "24 hours" },
-  { service: "Motion at Scale", price: "£1,500", unit: "/project", delivery: "24-48 hours" },
+  { service: "The Infinite Studio", price: "£1,000", unit: "/batch", delivery: "24 hours" },
+  { service: "Performance Architecture", price: "£1,500", unit: "/project", delivery: "48 hours" },
+  { service: "Motion at Scale", price: "£2,000", unit: "/project", delivery: "72 hours" },
 ];
 
 export default function StudioPricing() {
@@ -43,11 +42,15 @@ export default function StudioPricing() {
           {/* Rows */}
           <div className="divide-y divide-white/5">
             {pricingData.map((item, index) => (
-              <div key={index} className="grid grid-cols-1 md:grid-cols-12 gap-4 p-6 items-center hover:bg-white/[0.02] transition-colors">
+              <button
+                key={index}
+                onClick={() => scrollToSection('creative-booking')}
+                className="grid grid-cols-1 md:grid-cols-12 gap-4 p-6 items-center hover:bg-white/[0.03] transition-all cursor-pointer w-full text-left border-l-2 border-transparent hover:border-[#b7d1ea]/50 group"
+              >
                 
                 {/* Service Name */}
                 <div className="col-span-1 md:col-span-6">
-                  <span className="text-lg font-medium text-white block tracking-wide">{item.service}</span>
+                  <span className="text-lg font-medium text-white block tracking-wide group-hover:text-[#b7d1ea] transition-colors">{item.service}</span>
                 </div>
 
                 {/* Price */}
@@ -60,12 +63,12 @@ export default function StudioPricing() {
                 {/* Delivery */}
                 <div className="col-span-1 md:col-span-3 md:text-right">
                   <span className="md:hidden text-white/40 mr-2 text-sm uppercase tracking-wide">Velocity:</span>
-                  <span className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium">
+                  <span className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium group-hover:bg-[#b7d1ea]/20 group-hover:border-[#b7d1ea]/50 transition-colors">
                     {item.delivery}
                   </span>
                 </div>
 
-              </div>
+              </button>
             ))}
           </div>
 
@@ -80,9 +83,9 @@ export default function StudioPricing() {
                <h3 className="text-xl font-semibold text-white mb-2">
                  Need a relentless creative partner?
                </h3>
-               <p className="text-white/60 max-w-xl font-light">
-                 An entire creative studio for less than the cost of one hire. <span className="text-white font-medium">£800/month subscription</span> gives you an in-house studio. No overhead. No management. Just flow.
-               </p>
+                <p className="text-white/60 max-w-xl font-light">
+                  An entire creative studio for less than the cost of one hire. <span className="text-white font-medium">£1,250/month subscription</span> gives you unlimited creative capacity. No overhead. No management. Just flow.
+                </p>
              </div>
 
              <button 

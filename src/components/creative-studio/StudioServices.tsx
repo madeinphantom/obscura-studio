@@ -9,26 +9,33 @@ const services = [
     title: "The Infinite Studio",
     tagline: "Your product, in any context.",
     description: "Send us your raw product photos. We generate studio-grade mockups across any environment. Infinite variations. Zero reshoots.",
-    price: "Starting at £500",
+    price: "From £1,000",
     layer: "RAPID"
   },
   {
     title: "Performance Architecture",
     tagline: "Ads built on data, not guesses.",
     description: "Static ads and carousels built on proven frameworks. We reverse-engineer what works, swap in your brand, and ship creative that compounds.",
-    price: "Starting at £1,000",
+    price: "From £1,500",
     layer: "SCALABLE"
   },
   {
     title: "Motion at Scale",
     tagline: "Broadcast quality for the feed.",
     description: "Short-form video ads (15-30s) built programmatically. Kinetic typography, motion graphics, and product showcases. Captivate in seconds.",
-    price: "Starting at £1,500",
+    price: "From £2,000",
     layer: "HIGH IMPACT"
   }
 ];
 
 export default function StudioServices() {
+  const scrollToBooking = () => {
+    const element = document.getElementById('creative-booking');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-24 relative">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -40,6 +47,9 @@ export default function StudioServices() {
           <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tighter">
             Your unfair advantage.
           </h2>
+          <p className="text-white/60 text-lg font-light max-w-2xl mx-auto">
+            Click any service to initialize your creative brief.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -59,6 +69,7 @@ export default function StudioServices() {
                 layer={service.layer}
                 className="h-full min-h-[400px]"
                 gradient="from-white/5 to-white/5"
+                onClick={scrollToBooking}
               >
                 <div className="mb-6">
                   <p className="text-sm font-medium text-[#b7d1ea]">{service.tagline}</p>

@@ -9,9 +9,11 @@ interface GlassFooterProps {
 }
 
 const productLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Book a Call', href: '#booking' },
+  { label: 'Intelligence Systems', href: '/#services' },
+  { label: 'Concierge', href: '/concierge' },
+  { label: 'Creative Studio', href: '/creative-studio' },
+  { label: 'How We Think', href: '/#thinking-layer' },
+  { label: 'Book a Call', href: '/#booking' },
 ];
 
 // TODO: Add real social media links for LinkedIn and Instagram when available
@@ -28,12 +30,12 @@ export default function GlassFooter({ className = '' }: GlassFooterProps) {
       
       {/* Background Watermark */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none select-none z-0 opacity-[0.03]">
-        <h1 className="text-[20vw] font-bold leading-none tracking-tighter text-white whitespace-nowrap absolute -bottom-[5vw] -left-[2vw]">
+        <h1 className="text-[20vw] font-bold leading-none tracking-tighter text-white/30 whitespace-nowrap absolute -bottom-[5vw] -left-[2vw]">
           OBSCURA
         </h1>
       </div>
 
-      <div className="relative z-10 border-t border-white/10 bg-black/40 backdrop-blur-3xl">
+      <div className="relative z-10 border-t border-white/10 bg-[#b7d1ea]/30 backdrop-blur-4xl">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
             
@@ -41,10 +43,10 @@ export default function GlassFooter({ className = '' }: GlassFooterProps) {
             <div className="flex flex-col justify-between h-full space-y-12">
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold tracking-tight text-white">
-                  OBSCURA AI STUDIO
+                  OBSCURA AI
                 </h3>
                 <p className="text-lg text-white/50 font-light max-w-sm leading-relaxed">
-                  We build custom AI systems, tools, and workflows that make you a 10x human. Automate the mundane and focus on what matters.
+                  We build intelligence systems that research, extract, and reason. Document processing. Deal research. Agent systems.
                 </p>
               </div>
               
@@ -104,7 +106,7 @@ export default function GlassFooter({ className = '' }: GlassFooterProps) {
         <div className="border-t border-white/5 bg-black/20">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-white/20 font-medium tracking-wider uppercase">
-              © 2025 Obscura AI Studio
+              © 2026 Obscura AI
             </p>
             <p className="text-xs text-white/20 font-medium tracking-wider uppercase">
               London, UK — Worldwide

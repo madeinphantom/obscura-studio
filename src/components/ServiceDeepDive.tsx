@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { ArrowDown } from 'lucide-react';
 
 export default function ServiceDeepDive() {
   const details = [
