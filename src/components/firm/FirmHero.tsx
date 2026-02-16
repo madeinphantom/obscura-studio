@@ -16,9 +16,9 @@ export default function FirmHero() {
         <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-2">
           <span className="text-sm font-bold tracking-widest text-[#b7d1ea] uppercase">AI-Native Firm</span>
         </div>
-        <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-[0.9]" style={{ color: '#b7d1ea' }}>
+        <h1 className="text-3xl md:text-6xl font-bold tracking-tighter text-[#b7d1ea] leading-[0.9]">
           AI Infrastructure<br />
-          For The Modern Firm.
+          For <span className="font-fraunces italic font-light">The Modern Firm.</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/60 max-w-xl font-light leading-relaxed">
@@ -28,7 +28,7 @@ export default function FirmHero() {
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
            <button 
              onClick={() => scrollToSection('booking')}
-             className="px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide uppercase hover:bg-[#b7d1ea] transition-colors duration-300"
+             className="px-8 py-4 bg-[#b7d1ea]/80 text-black font-semibold text-sm tracking-wide uppercase hover:bg-violet-200/40 transition-colors duration-300"
            >
              Book a Free Strategy Call
            </button>

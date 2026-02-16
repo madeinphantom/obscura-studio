@@ -74,7 +74,7 @@ export default function FirmServices() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-2">
             <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">What We Build</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">
+          <h2 className="text-4xl md:text-5xl tracking-tighter text-white font-fraunces font-normal italic">
             Join The AI Race Now.
           </h2>
           <p className="text-lg text-white/50 font-light max-w-2xl">

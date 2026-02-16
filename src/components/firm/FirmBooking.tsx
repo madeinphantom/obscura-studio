@@ -26,7 +26,7 @@ export default function FirmBooking() {
         <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
           <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">Let&apos;s Talk</span>
         </div>
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">Ready to deploy intelligence?</h2>
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">Ready to <span className="font-fraunces italic font-light">deploy intelligence?</span></h2>
         <p className="text-xl text-white/60 font-light leading-relaxed max-w-2xl mx-auto">
           Book a complimentary strategy session. We&apos;ll audit your current workflow and map out exactly where AI adds the most leverage. Actionable roadmap, guaranteed.
         </p>

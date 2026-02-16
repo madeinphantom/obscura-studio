@@ -52,7 +52,7 @@ export default function FirmCaseStudy() {
             <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">The Transformation</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-6">
-            Manual vs Obscura.
+            Manual vs <span className="font-fraunces italic font-light">Obscura.</span>
           </h2>
         </div>
 

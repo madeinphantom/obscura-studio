@@ -64,7 +64,7 @@ export default function FirmAnchor() {
             <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">The Economics</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">
-            Build vs Deploy.
+            Build vs <span className="font-fraunces italic font-light">Deploy.</span>
           </h2>
         </div>
 

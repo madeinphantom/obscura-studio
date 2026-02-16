@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville } from "next/font/google";
+import { Libre_Baskerville, Fraunces } from "next/font/google";
 import "./globals.css";
 import Beams from "@/components/Beams";
 
@@ -34,6 +34,13 @@ export const metadata: Metadata = {
   },
 };
 
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  // Fraunces is a variable font, so we don't strictly need weights, 
+  // but we can specify if needed. Default is usually fine for variable.
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${libreBaskerville.variable} font-serif antialiased bg-black text-white`}>
+      <body
+        className={`${libreBaskerville.variable} ${fraunces.variable} font-serif antialiased bg-black text-white`}
+      >
         <div className="fixed inset-0 z-0 w-full h-full pointer-events-none">
           <Beams
             beamWidth={2.5}
@@ -54,11 +63,8 @@ export default function RootLayout({
             rotation={45}
           />
         </div>
-        <div className="relative z-10">
-          {children}
-        </div>
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );
 }
-

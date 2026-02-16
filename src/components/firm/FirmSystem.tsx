@@ -142,7 +142,7 @@ export default function FirmSystem() {
         <div>
           <div className="mb-16 max-w-3xl">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-6">
-              The Thinking Layer.
+              <span className="font-fraunces italic font-light">The Thinking Layer.</span>
             </h2>
             <p className="text-lg text-white/50 font-light max-w-2xl leading-relaxed">
               Most AI just retrieves data. We build systems that reason with it.
