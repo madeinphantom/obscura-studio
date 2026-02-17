@@ -13,6 +13,7 @@ export default function TesseractScene({ colorTheme = 'light' }: { colorTheme?: 
   const outerSize = 2.2
   const innerSize = 1.1
   
+  // RESTORED V2 COLORS EXACTLY
   // Light Theme (Default): Cyan/Blue on Black BG
   // Dark Theme: Navy/Black on White BG
   const outerColor = isDark ? "#021024" : "#00aaff"

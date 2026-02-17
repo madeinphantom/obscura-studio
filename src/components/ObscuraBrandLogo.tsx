@@ -10,18 +10,19 @@ interface ObscuraBrandLogoProps {
 }
 
 export default function ObscuraBrandLogo({ 
-  label = "obscura ai", 
+  label = "obscura xyz", 
   theme = 'light',
   size = 'hero'
 }: ObscuraBrandLogoProps) {
   
   const isHeader = size === 'header'
+  // Restore V2 exact color logic: Light Blue on Dark BG, Black on White BG
   const textColor = theme === 'light' ? '#b7d1ea' : '#000000'
   
-  // Dimensions based on size
-  const iconDim = isHeader ? 48 : 150
-  const fontSize = isHeader ? '1.25rem' : '4rem'
-  const gap = isHeader ? -6 : -20
+  // Dimensions based on size - UPGRADED for better visibility
+  const iconDim = isHeader ? 56 : 150
+  const fontSize = isHeader ? '1.5rem' : '4rem'
+  const gap = isHeader ? -8 : -20
   const letterSpacing = isHeader ? '-0.01em' : '-0.02em'
 
   return (
@@ -46,7 +47,7 @@ export default function ObscuraBrandLogo({
       >
         <Canvas 
           gl={{ preserveDrawingBuffer: true, antialias: true, alpha: true }}
-          dpr={[1, 2]} // Standard R3F dpr prop
+          dpr={[1, 2]}
           camera={{ 
             position: [0.664, 0.279, 3.935], 
             rotation: [-0.0722, 0.1669, 0.0122],
