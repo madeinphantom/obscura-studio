@@ -20,7 +20,7 @@ export default function ObscuraBrandLogo({
   const textColor = theme === 'light' ? '#b7d1ea' : '#000000'
   
   // Dimensions based on size - UPGRADED for better visibility
-  const iconDim = isHeader ? 56 : 150
+  const iconDim = isHeader ? 60 : 150
   const fontSize = isHeader ? '1.5rem' : '4rem'
   const gap = isHeader ? -8 : -20
   const letterSpacing = isHeader ? '-0.01em' : '-0.02em'
