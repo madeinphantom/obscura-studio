@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import ObscuraBrandLogo from './ObscuraBrandLogo';
 
 interface GlassHeaderProps {
   className?: string;
@@ -56,9 +57,7 @@ export default function GlassHeader({ className = '' }: GlassHeaderProps) {
               onClick={handleLogoClick} 
               className="hover:opacity-80 transition-opacity"
             >
-              <h1 className="text-xl font-bold text-white tracking-tight">
-                OBSCURA AI
-              </h1>
+              <ObscuraBrandLogo theme="light" size="header" />
             </button>
 
             {/* Nav Links - Desktop */}
