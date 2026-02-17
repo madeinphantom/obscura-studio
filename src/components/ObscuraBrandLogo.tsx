@@ -12,9 +12,11 @@ function ScreenshotHandler({ theme, showText }: { theme: 'light' | 'dark', showT
 
   useEffect(() => {
     const handleAction = async (e: MouseEvent | KeyboardEvent) => {
+      const active = document.activeElement
+      if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || (active as HTMLElement).isContentEditable)) return
+
       const isIconShortcut = e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'i'
-      const isFullShortcut = (e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'p') ||
-                            (e.type === 'click' && e.target === gl.domElement)
+      const isFullShortcut = e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'p'
 
       if (isIconShortcut || isFullShortcut) {
         const original = document.body.style.cursor
@@ -78,11 +80,9 @@ function ScreenshotHandler({ theme, showText }: { theme: 'light' | 'dark', showT
     }
 
     window.addEventListener('keydown', handleAction)
-    gl.domElement.addEventListener('click', handleAction)
-    
+
     return () => {
       window.removeEventListener('keydown', handleAction)
-      gl.domElement.removeEventListener('click', handleAction)
     }
   }, [gl, scene, camera, theme, showText])
 
@@ -134,7 +134,7 @@ export default function ObscuraBrandLogo({
       >
         <Canvas 
           gl={{ preserveDrawingBuffer: true, antialias: true, alpha: true }}
-          pixelRatio={typeof window !== 'undefined' ? window.devicePixelRatio * 2 : 2}
+          dpr={typeof window !== 'undefined' ? window.devicePixelRatio * 2 : 2}
           camera={{ 
             position: [0.664, 0.279, 3.935], 
             rotation: [-0.0722, 0.1669, 0.0122],
