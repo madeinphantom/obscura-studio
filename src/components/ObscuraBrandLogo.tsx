@@ -5,15 +5,16 @@ import '../App.css'
 
 // ... imports
 
-function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
+function ScreenshotHandler({ theme, showText }: { theme: 'light' | 'dark', showText: boolean }) {
   const { gl, scene, camera } = useThree()
 
   useEffect(() => {
     const handleAction = async (e: MouseEvent | KeyboardEvent) => {
-      if (
-        (e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'p') ||
-        (e.type === 'click' && e.target === gl.domElement)
-      ) {
+      const isIconShortcut = e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'i'
+      const isFullShortcut = (e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'p') ||
+                            (e.type === 'click' && e.target === gl.domElement)
+
+      if (isIconShortcut || isFullShortcut) {
         const original = document.body.style.cursor
         document.body.style.cursor = 'wait'
 
@@ -33,39 +34,43 @@ function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
         const ctx = tempCanvas.getContext('2d')
         if (!ctx) return
 
-        // Set dimensions
-        ctx.font = `300 ${fontSize}px 'Fraunces'`
-        const textLabel = "obscura xyz"
-        const textMetrics = ctx.measureText(textLabel)
-        const textWidth = textMetrics.width
-        
-        tempCanvas.width = iconSize + textWidth + gap + (50 * scale)
-        tempCanvas.height = iconSize
-        
-        // Draw
-        ctx.clearRect(0, 0, tempCanvas.width, tempCanvas.height)
-        
-        const iconY = (tempCanvas.height - iconSize) / 2
-        ctx.drawImage(img, 0, iconY, iconSize, iconSize)
-        
-        // Text Color based on Theme: Light Blue on Black BG, Black on White BG
-        ctx.fillStyle = theme === 'light' ? "#b7d1ea" : "#000000"
-        ctx.font = `300 ${fontSize}px 'Fraunces'`
-        ctx.textBaseline = 'middle'
-        
-        const textX = iconSize + gap
-        const textY = tempCanvas.height / 2 - (4 * scale)
-        
-        ctx.fillText(textLabel, textX, textY)
+        if (isIconShortcut) {
+          // Icon Only Mode
+          tempCanvas.width = iconSize
+          tempCanvas.height = iconSize
+          ctx.clearRect(0, 0, tempCanvas.width, tempCanvas.height)
+          ctx.drawImage(img, 0, 0, iconSize, iconSize)
+        } else {
+          // Full Logo Mode
+          ctx.font = `300 ${fontSize}px 'Fraunces'`
+          const textLabel = "obscura xyz"
+          const textMetrics = ctx.measureText(textLabel)
+          const textWidth = textMetrics.width
+          
+          tempCanvas.width = iconSize + textWidth + gap + (50 * scale)
+          tempCanvas.height = iconSize
+          
+          ctx.clearRect(0, 0, tempCanvas.width, tempCanvas.height)
+          const iconY = (tempCanvas.height - iconSize) / 2
+          ctx.drawImage(img, 0, iconY, iconSize, iconSize)
+          
+          ctx.fillStyle = theme === 'light' ? "#b7d1ea" : "#000000"
+          ctx.font = `300 ${fontSize}px 'Fraunces'`
+          ctx.textBaseline = 'middle'
+          
+          const textX = iconSize + gap
+          const textY = tempCanvas.height / 2 - (4 * scale)
+          ctx.fillText(textLabel, textX, textY)
+        }
 
         const data = tempCanvas.toDataURL('image/png', 1.0)
         const link = document.createElement('a')
-        // Filename includes theme
-        link.setAttribute('download', `obscura-logo-${theme}-${Date.now()}.png`)
+        const version = isIconShortcut ? 'icon' : 'full'
+        link.setAttribute('download', `obscura-${version}-${theme}-${Date.now()}.png`)
         link.setAttribute('href', data)
         link.click()
 
-        console.log(`Full logo (${theme}) exported!`)
+        console.log(`${version} logo (${theme}) exported!`)
         document.body.style.cursor = original
       }
     }
@@ -77,19 +82,21 @@ function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
       window.removeEventListener('keydown', handleAction)
       gl.domElement.removeEventListener('click', handleAction)
     }
-  }, [gl, scene, camera, theme]) // Re-run effect if theme changes
+  }, [gl, scene, camera, theme, showText])
 
   return null
 }
 
 interface ObscuraBrandLogoProps {
   label?: string;
-  theme?: 'light' | 'dark'; // Add theme prop
+  theme?: 'light' | 'dark';
+  showText?: boolean;
 }
 
 export default function ObscuraBrandLogo({ 
   label = "Obscura xyz", 
-  theme = 'light' 
+  theme = 'light',
+  showText = true
 }: ObscuraBrandLogoProps) {
   
   // Text color based on theme: Light Blue on Black BG, Black on White BG
@@ -107,16 +114,18 @@ export default function ObscuraBrandLogo({
             fov: 75 
           }}
         >
-          <ScreenshotHandler theme={theme} />
+          <ScreenshotHandler theme={theme} showText={showText} />
           <TesseractScene colorTheme={theme} />
         </Canvas>
       </div>
-      <h1 
-        className="logo-text"
-        style={{ color: textColor }} // Apply text color
-      >
-        {label}
-      </h1>
+      {showText && (
+        <h1 
+          className="logo-text"
+          style={{ color: textColor }} // Apply text color
+        >
+          {label}
+        </h1>
+      )}
     </div>
   )
 }
