@@ -92,8 +92,8 @@ export default function ObscuraBrandLogo({
   theme = 'light' 
 }: ObscuraBrandLogoProps) {
   
-  // Text color based on theme
-  const textColor = theme === 'light' ? '#ffffff' : '#000000'
+  // Text color based on theme: Light Blue on Black BG, Black on White BG
+  const textColor = theme === 'light' ? '#b7d1ea' : '#000000'
 
   return (
     <div className="logo-container">
