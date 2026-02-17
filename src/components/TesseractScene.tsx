@@ -1,28 +1,23 @@
-import { useRef, useMemo, useState } from 'react'
-import { useFrame } from '@react-three/fiber'
+import { useRef, useMemo } from 'react'
 import * as THREE from 'three'
 import { Edges } from '@react-three/drei'
 
-export default function TesseractScene() {
+export default function TesseractScene({ colorTheme = 'light' }: { colorTheme?: 'light' | 'dark' }) {
   const groupRef = useRef<THREE.Group>(null)
-  const [isRotating, setIsRotating] = useState(false)
 
-  useFrame(() => {
-    if (groupRef.current && isRotating) {
-      groupRef.current.rotation.x += 0.005
-      groupRef.current.rotation.y += 0.008
-    }
-  })
-
-  // Original colors
-  const outerSize = 2
-  const innerSize = 1
-  const outerColor = "#00aaff"
-  const innerColor = "#b7d1ea"
-  const edgeColor = "#ffffff"
+  // Colors
+  const isDark = colorTheme === 'dark' // Dark Mode = Dark Lines on Light BG
+  
+  const outerSize = 2.2
+  const innerSize = 1.1
+  
+  // Light Theme (Default): Cyan/Blue on Black BG
+  // Dark Theme: Navy/Black on White BG
+  const outerColor = isDark ? "#003366" : "#00aaff"
+  const innerColor = isDark ? "#004488" : "#b7d1ea"
+  const edgeColor = isDark ? "#000000" : "#ffffff"
 
   // Connector lines geometry
-  // Connecting corners of inner cube to outer cube
   const connectorGeometry = useMemo(() => {
     const getCorners = (s: number) => {
       const r = s / 2
@@ -43,7 +38,6 @@ export default function TesseractScene() {
     const points: THREE.Vector3[] = []
 
     for (let i = 0; i < 8; i++) {
-        // LineSegments expects pairs of points
         points.push(outerCorners[i])
         points.push(innerCorners[i])
     }
@@ -54,10 +48,7 @@ export default function TesseractScene() {
   return (
     <group 
       ref={groupRef} 
-      rotation={[Math.PI / 4, Math.PI / 4, 0]}
-      onClick={() => setIsRotating(!isRotating)}
-      onPointerOver={() => (document.body.style.cursor = 'pointer')}
-      onPointerOut={() => (document.body.style.cursor = 'auto')}
+      rotation={[Math.PI / 8, Math.PI / 4, 0]} // Hero Angle - Locked
     >
       {/* Outer Cube */}
       <mesh>
@@ -65,11 +56,11 @@ export default function TesseractScene() {
         <meshBasicMaterial 
           color={outerColor} 
           transparent 
-          opacity={0.15} 
+          opacity={0.1} 
           side={THREE.DoubleSide} 
           depthWrite={false} 
         />
-        <Edges color={edgeColor} transparent opacity={0.8} threshold={15} /> 
+        <Edges color={edgeColor} transparent opacity={0.5} threshold={15} /> 
       </mesh>
 
       {/* Inner Cube */}
@@ -78,7 +69,7 @@ export default function TesseractScene() {
         <meshBasicMaterial 
           color={innerColor} 
           transparent 
-          opacity={0.25} 
+          opacity={0.15} 
           side={THREE.DoubleSide} 
           depthWrite={false} 
         />
@@ -87,7 +78,7 @@ export default function TesseractScene() {
 
       {/* Connectors */}
       <lineSegments geometry={connectorGeometry}>
-        <lineBasicMaterial color={edgeColor} transparent opacity={0.8} linewidth={2} />
+        <lineBasicMaterial color={edgeColor} transparent opacity={0.3} linewidth={1} />
       </lineSegments>
     </group>
   )

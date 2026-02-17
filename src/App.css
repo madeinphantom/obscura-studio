@@ -9,18 +9,16 @@
 
 body {
   margin: 0;
-  background: #000000;
+  background: #c70f0f;
   color: #ffffff;
 }
 
 .logo-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* Position handling is now done by parent flex containers */
+  position: relative; 
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0.5px;
   pointer-events: none; /* Allow clicks to pass to canvas if needed, or handle specifically */
 }
 
@@ -28,6 +26,8 @@ body {
   width: 150px;
   height: 150px;
   pointer-events: auto;
+  margin-top: -2px; /* Optical adjustment: nudge mark up */
+  margin-right: -20px; /* Pull text into the transparent padding of the canvas */
 }
 
 .logo-text {
