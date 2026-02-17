@@ -12,6 +12,9 @@ function ScreenshotHandler({ theme, showText }: { theme: 'light' | 'dark', showT
 
   useEffect(() => {
     const handleAction = async (e: MouseEvent | KeyboardEvent) => {
+      const active = document.activeElement
+      if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || (active as HTMLElement).isContentEditable)) return
+
       const isIconShortcut = e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'i'
       const isFullShortcut = e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'p'
 

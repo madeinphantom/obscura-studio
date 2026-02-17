@@ -10,13 +10,23 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://obscura.xyz"),
   title: "OBSCURA XYZ | AI-Native Firm",
   description:
-    "AI-native firm building intellingent infrastructure for the modern firm.",
+    "AI-native firm building intelligent infrastructure for the modern firm.",
+  icons: {
+    icon: [
+      { url: "/favicon/favicon.ico" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon/apple-touch-icon.png",
+  },
+  manifest: "/favicon/site.webmanifest",
   openGraph: {
     title: "OBSCURA XYZ | AI-Native Firm",
     description:
-      "AI-native firm building intellingent infrastructure for the modern firm.",
+      "AI-native firm building intelligent infrastructure for the modern firm.",
     url: "https://obscura.xyz/",
     siteName: "OBSCURA XYZ",
     locale: "en_US",
@@ -34,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OBSCURA XYZ | AI-Native Firm",
     description:
-      "AI-native firm building intellingent infrastructure for the modern firm.",
+      "AI-native firm building intelligent infrastructure for the modern firm.",
     images: ["/og-image.png"],
   },
   robots: {
