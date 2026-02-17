@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   return (
     <main>
-      <ObscuraBrandLogo label="Obscura xyz" isItalic={true} />
+      <ObscuraBrandLogo label="Obscura xyz" isItalic={false} />
     </main>
   )
 }
