@@ -13,8 +13,7 @@ function ScreenshotHandler({ theme, showText }: { theme: 'light' | 'dark', showT
   useEffect(() => {
     const handleAction = async (e: MouseEvent | KeyboardEvent) => {
       const isIconShortcut = e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'i'
-      const isFullShortcut = (e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'p') ||
-                            (e.type === 'click' && e.target === gl.domElement)
+      const isFullShortcut = e.type === 'keydown' && (e as KeyboardEvent).key.toLowerCase() === 'p'
 
       if (isIconShortcut || isFullShortcut) {
         const original = document.body.style.cursor
@@ -78,11 +77,9 @@ function ScreenshotHandler({ theme, showText }: { theme: 'light' | 'dark', showT
     }
 
     window.addEventListener('keydown', handleAction)
-    gl.domElement.addEventListener('click', handleAction)
-    
+
     return () => {
       window.removeEventListener('keydown', handleAction)
-      gl.domElement.removeEventListener('click', handleAction)
     }
   }, [gl, scene, camera, theme, showText])
 
