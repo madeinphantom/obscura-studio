@@ -5,7 +5,7 @@ import '../App.css'
 
 // ... imports
 
-function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
+function ScreenshotHandler({ theme, isItalic }: { theme: 'light' | 'dark', isItalic: boolean }) {
   const { gl, scene, camera } = useThree()
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
         if (!ctx) return
 
         // Set dimensions
-        ctx.font = `300 ${fontSize}px 'Fraunces'`
+        ctx.font = `${isItalic ? 'italic ' : ''}300 ${fontSize}px 'Fraunces'`
         const textLabel = "obscura xyz"
         const textMetrics = ctx.measureText(textLabel)
         const textWidth = textMetrics.width
@@ -50,7 +50,7 @@ function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
         
         // Text Color based on Theme
         ctx.fillStyle = theme === 'light' ? "#ffffff" : "#000000"
-        ctx.font = `300 ${fontSize}px 'Fraunces'`
+        ctx.font = `${isItalic ? 'italic ' : ''}300 ${fontSize}px 'Fraunces'`
         ctx.textBaseline = 'middle'
         
         const textX = iconSize + gap
@@ -77,7 +77,7 @@ function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
       window.removeEventListener('keydown', handleAction)
       gl.domElement.removeEventListener('click', handleAction)
     }
-  }, [gl, scene, camera, theme]) // Re-run effect if theme changes
+  }, [gl, scene, camera, theme, isItalic]) // Re-run effect if theme changes
 
   return null
 }
@@ -90,7 +90,7 @@ interface ObscuraBrandLogoProps {
 
 export default function ObscuraBrandLogo({ 
   label = "Obscura xyz", 
-  isItalic = true,
+  isItalic = false,
   theme = 'light' 
 }: ObscuraBrandLogoProps) {
   
@@ -109,7 +109,7 @@ export default function ObscuraBrandLogo({
             fov: 75 
           }}
         >
-          <ScreenshotHandler theme={theme} />
+          <ScreenshotHandler theme={theme} isItalic={isItalic} />
           <TesseractScene colorTheme={theme} />
         </Canvas>
       </div>
