@@ -13,9 +13,13 @@ export default function TesseractScene({ colorTheme = 'light' }: { colorTheme?: 
   
   // Light Theme (Default): Cyan/Blue on Black BG
   // Dark Theme: Navy/Black on White BG
-  const outerColor = isDark ? "#003366" : "#00aaff"
-  const innerColor = isDark ? "#004488" : "#b7d1ea"
-  const edgeColor = isDark ? "#000000" : "#ffffff"
+  const outerColor = isDark ? "#021024" : "#00aaff"
+  const innerColor = isDark ? "#052040" : "#b7d1ea"
+  const edgeColor = isDark ? "#0a192f" : "#ffffff"
+  
+  // Opacity Tuning (High Contrast for BOTH themes)
+  const edgeOpacity = 0.8
+  const faceOpacity = 0.15
 
   // Connector lines geometry
   const connectorGeometry = useMemo(() => {
@@ -56,11 +60,11 @@ export default function TesseractScene({ colorTheme = 'light' }: { colorTheme?: 
         <meshBasicMaterial 
           color={outerColor} 
           transparent 
-          opacity={0.1} 
+          opacity={faceOpacity} 
           side={THREE.DoubleSide} 
           depthWrite={false} 
         />
-        <Edges color={edgeColor} transparent opacity={0.5} threshold={15} /> 
+        <Edges color={edgeColor} transparent opacity={edgeOpacity} threshold={15} /> 
       </mesh>
 
       {/* Inner Cube */}
@@ -69,16 +73,16 @@ export default function TesseractScene({ colorTheme = 'light' }: { colorTheme?: 
         <meshBasicMaterial 
           color={innerColor} 
           transparent 
-          opacity={0.15} 
+          opacity={faceOpacity} 
           side={THREE.DoubleSide} 
           depthWrite={false} 
         />
-        <Edges color={edgeColor} transparent opacity={0.8} threshold={15} />
+        <Edges color={edgeColor} transparent opacity={edgeOpacity} threshold={15} />
       </mesh>
 
       {/* Connectors */}
       <lineSegments geometry={connectorGeometry}>
-        <lineBasicMaterial color={edgeColor} transparent opacity={0.3} linewidth={1} />
+        <lineBasicMaterial color={edgeColor} transparent opacity={0.5} linewidth={1} />
       </lineSegments>
     </group>
   )

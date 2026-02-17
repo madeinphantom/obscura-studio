@@ -5,7 +5,7 @@ import '../App.css'
 
 // ... imports
 
-function ScreenshotHandler({ theme, isItalic }: { theme: 'light' | 'dark', isItalic: boolean }) {
+function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
   const { gl, scene, camera } = useThree()
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function ScreenshotHandler({ theme, isItalic }: { theme: 'light' | 'dark', isIta
         if (!ctx) return
 
         // Set dimensions
-        ctx.font = `${isItalic ? 'italic ' : ''}300 ${fontSize}px 'Fraunces'`
+        ctx.font = `300 ${fontSize}px 'Fraunces'`
         const textLabel = "obscura xyz"
         const textMetrics = ctx.measureText(textLabel)
         const textWidth = textMetrics.width
@@ -50,7 +50,7 @@ function ScreenshotHandler({ theme, isItalic }: { theme: 'light' | 'dark', isIta
         
         // Text Color based on Theme
         ctx.fillStyle = theme === 'light' ? "#ffffff" : "#000000"
-        ctx.font = `${isItalic ? 'italic ' : ''}300 ${fontSize}px 'Fraunces'`
+        ctx.font = `300 ${fontSize}px 'Fraunces'`
         ctx.textBaseline = 'middle'
         
         const textX = iconSize + gap
@@ -77,20 +77,18 @@ function ScreenshotHandler({ theme, isItalic }: { theme: 'light' | 'dark', isIta
       window.removeEventListener('keydown', handleAction)
       gl.domElement.removeEventListener('click', handleAction)
     }
-  }, [gl, scene, camera, theme, isItalic]) // Re-run effect if theme changes
+  }, [gl, scene, camera, theme]) // Re-run effect if theme changes
 
   return null
 }
 
 interface ObscuraBrandLogoProps {
   label?: string;
-  isItalic?: boolean;
   theme?: 'light' | 'dark'; // Add theme prop
 }
 
 export default function ObscuraBrandLogo({ 
   label = "Obscura xyz", 
-  isItalic = false,
   theme = 'light' 
 }: ObscuraBrandLogoProps) {
   
@@ -109,12 +107,12 @@ export default function ObscuraBrandLogo({
             fov: 75 
           }}
         >
-          <ScreenshotHandler theme={theme} isItalic={isItalic} />
+          <ScreenshotHandler theme={theme} />
           <TesseractScene colorTheme={theme} />
         </Canvas>
       </div>
       <h1 
-        className={`logo-text ${isItalic ? 'italic' : ''}`}
+        className="logo-text"
         style={{ color: textColor }} // Apply text color
       >
         {label}
