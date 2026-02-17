@@ -10,23 +10,32 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  title: "Obscura AI — Research Intelligence, Deployed",
+  title: "OBSCURA XYZ | AI-Native Firm",
   description:
-    "We build intelligence systems that research, extract, and reason — so you don't have to. Document processing. Deal research. Agent systems.",
+    "AI-native firm building intellingent infrastructure for the modern firm.",
   openGraph: {
-    title: "Obscura AI — Research Intelligence, Deployed",
+    title: "OBSCURA XYZ | AI-Native Firm",
     description:
-      "Intelligence systems that research, extract, and reason. Document processing. Deal research. Agent systems.",
-    url: "https://obscuraai.studio",
-    siteName: "Obscura AI",
-    locale: "en_GB",
+      "AI-native firm building intellingent infrastructure for the modern firm.",
+    url: "https://obscura.xyz/",
+    siteName: "OBSCURA XYZ",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "OBSCURA XYZ",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Obscura AI — Research Intelligence, Deployed",
+    title: "OBSCURA XYZ | AI-Native Firm",
     description:
-      "Intelligence systems that research, extract, and reason. Document processing. Deal research. Agent systems.",
+      "AI-native firm building intellingent infrastructure for the modern firm.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
