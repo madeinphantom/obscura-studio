@@ -47,15 +47,15 @@ export default function GlassHeader({ className = '' }: GlassHeaderProps) {
   };
 
   return (
-    <header className={`w-screen fixed top-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] z-50 ${className}`}>
+    <header className={`w-full fixed top-0 left-0 right-0 z-50 ${className}`}>
       <div className="bg-[#b7d1ea]/10 backdrop-blur-2xl border-b border-white/25">
-        <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
+          <div className="flex items-center justify-between gap-2">
             
             {/* Logo */}
             <button 
               onClick={handleLogoClick} 
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity flex-shrink-0"
             >
               <ObscuraBrandLogo theme="light" size="header" />
             </button>
@@ -76,7 +76,7 @@ export default function GlassHeader({ className = '' }: GlassHeaderProps) {
             {/* CTA Button */}
             <button 
               onClick={() => handleNavigation({ label: 'Book', id: 'booking' })}
-              className="px-5 py-2.5 bg-[#b7d1ea]/80 text-black text-sm font-semibold rounded-none hover:bg-violet-200/40 transition-colors"
+              className="px-3 py-2 md:px-5 md:py-2.5 bg-[#b7d1ea]/80 text-black text-[11px] md:text-sm font-semibold rounded-none hover:bg-violet-200/40 transition-colors whitespace-nowrap"
             >
               Book Free Strategy Call
             </button>
