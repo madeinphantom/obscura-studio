@@ -93,23 +93,48 @@ interface ObscuraBrandLogoProps {
   label?: string;
   theme?: 'light' | 'dark';
   showText?: boolean;
+  size?: 'hero' | 'header';
 }
 
 export default function ObscuraBrandLogo({ 
   label = "Obscura xyz", 
   theme = 'light',
-  showText = true
+  showText = true,
+  size = 'hero'
 }: ObscuraBrandLogoProps) {
+  const isHeader = size === 'header';
   
-  // Text color based on theme: Light Blue on Black BG, Black on White BG
+  // Text color based on theme
   const textColor = theme === 'light' ? '#b7d1ea' : '#000000'
 
+  // Refined dimensions for mobile vs desktop
+  const iconSize = isHeader ? 'clamp(40px, 8vw, 60px)' : 'clamp(100px, 20vw, 150px)';
+  const fontSize = isHeader ? 'clamp(1.2rem, 3.5vw, 1.5rem)' : 'clamp(2.5rem, 8vw, 4rem)';
+  const gap = isHeader ? 'clamp(-8px, -1.5vw, -10px)' : 'clamp(-15px, -3vw, -20px)';
+  const marginTop = isHeader ? '-1px' : '-2px';
+
   return (
-    <div className="logo-container">
-      <div className="tesseract-wrapper">
+    <div 
+      className="logo-container"
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        position: 'relative'
+      }}
+    >
+      <div 
+        className="tesseract-wrapper"
+        style={{
+          width: iconSize,
+          height: iconSize,
+          marginRight: gap,
+          marginTop: marginTop,
+          flexShrink: 0
+        }}
+      >
         <Canvas 
           gl={{ preserveDrawingBuffer: true, antialias: true, alpha: true }}
-          pixelRatio={window.devicePixelRatio * 2}
+          pixelRatio={typeof window !== 'undefined' ? window.devicePixelRatio * 2 : 2}
           camera={{ 
             position: [0.664, 0.279, 3.935], 
             rotation: [-0.0722, 0.1669, 0.0122],
@@ -123,7 +148,11 @@ export default function ObscuraBrandLogo({
       {showText && (
         <h1 
           className="logo-text"
-          style={{ color: textColor }} // Apply text color
+          style={{ 
+            color: textColor,
+            fontSize: fontSize,
+            marginTop: isHeader ? '1px' : '3px'
+          }}
         >
           {label}
         </h1>
