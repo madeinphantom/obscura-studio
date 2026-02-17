@@ -1,0 +1,44 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  color: #ffffff;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  pointer-events: none; /* Allow clicks to pass to canvas if needed, or handle specifically */
+}
+
+.tesseract-wrapper {
+  width: 150px;
+  height: 150px;
+  pointer-events: auto;
+}
+
+.logo-text {
+  font-family: 'Fraunces', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  user-select: none;
+}
+
+.italic {
+  font-style: italic;
+}
