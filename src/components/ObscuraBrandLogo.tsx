@@ -48,8 +48,8 @@ function ScreenshotHandler({ theme }: { theme: 'light' | 'dark' }) {
         const iconY = (tempCanvas.height - iconSize) / 2
         ctx.drawImage(img, 0, iconY, iconSize, iconSize)
         
-        // Text Color based on Theme
-        ctx.fillStyle = theme === 'light' ? "#ffffff" : "#000000"
+        // Text Color based on Theme: Light Blue on Black BG, Black on White BG
+        ctx.fillStyle = theme === 'light' ? "#b7d1ea" : "#000000"
         ctx.font = `300 ${fontSize}px 'Fraunces'`
         ctx.textBaseline = 'middle'
         
