@@ -134,7 +134,7 @@ export default function ObscuraBrandLogo({
       >
         <Canvas 
           gl={{ preserveDrawingBuffer: true, antialias: true, alpha: true }}
-          pixelRatio={typeof window !== 'undefined' ? window.devicePixelRatio * 2 : 2}
+          dpr={typeof window !== 'undefined' ? window.devicePixelRatio * 2 : 2}
           camera={{ 
             position: [0.664, 0.279, 3.935], 
             rotation: [-0.0722, 0.1669, 0.0122],
