@@ -95,7 +95,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Creative Studio Cross-Sell */}
+        {/* CREATIVE STUDIO SHUTDOWN — 2026-02-19
         <div className="relative p-[1px] rounded-3xl overflow-hidden group mb-12 border border-white/10 bg-white/5 backdrop-blur-md">
           <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
           
@@ -119,6 +119,7 @@ export default function Services() {
              </a>
           </div>
         </div>
+        */}
 
          {/* Detailed Breakdown */}
         <ServiceDeepDive />

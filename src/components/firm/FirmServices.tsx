@@ -49,22 +49,23 @@ export default function FirmServices() {
       onClick: () => router.push("/concierge"),
       gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/55",
     },
-    {
-      title: "Creative Studio",
-      tagline: "Generative assets. Capped monthly access.",
-      layer: "CREATIVE",
-      price: "Membership",
-      description: "",
-      details: [
-        "Product mockups",
-        "Ad creatives",
-        "Programmatic video",
-        "By invitation only",
-      ],
-      cta: "Explore Studio",
-      onClick: () => router.push("/creative-studio"),
-      gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/55",
-    },
+    // CREATIVE STUDIO SHUTDOWN — 2026-02-19
+    // {
+    //   title: "Creative Studio",
+    //   tagline: "Generative assets. Capped monthly access.",
+    //   layer: "CREATIVE",
+    //   price: "Membership",
+    //   description: "",
+    //   details: [
+    //     "Product mockups",
+    //     "Ad creatives",
+    //     "Programmatic video",
+    //     "By invitation only",
+    //   ],
+    //   cta: "Explore Studio",
+    //   onClick: () => router.push("/creative-studio"),
+    //   gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/55",
+    // },
   ];
 
   return (
@@ -82,7 +83,7 @@ export default function FirmServices() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <PortalCard
               key={index}

@@ -17,8 +17,8 @@ export default function FirmHero() {
           <span className="text-sm font-bold tracking-widest text-[#b7d1ea] uppercase">AI-Native Firm</span>
         </div>
         <h1 className="text-3xl md:text-6xl font-bold tracking-tighter text-[#b7d1ea] leading-[0.9]">
-          AI Infrastructure<br />
-          For <span className="font-fraunces italic font-light">The Modern Firm.</span>
+          Private AI Infrastructure<br />
+          For <span className="font-fraunces italic font-light">The Modern Firm .</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/60 max-w-xl font-light leading-relaxed">

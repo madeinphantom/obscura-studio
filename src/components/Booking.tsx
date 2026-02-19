@@ -32,7 +32,7 @@ export default function Booking() {
         </p>
       </div>
 
-      {/* Creative Studio Cross-Sell */}
+      {/* CREATIVE STUDIO SHUTDOWN — 2026-02-19
       <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
         <a 
           href="/creative-studio" 
@@ -45,6 +45,7 @@ export default function Booking() {
           <span className="text-white/80 group-hover:translate-x-1 transition-transform">→</span>
         </a>
       </div>
+      */}
       
       {/* Appointment Booking Embed */}
       <GlassCard className="w-full max-w-4xl h-[500px] p-0 md:p-4 overflow-hidden shadow-2xl shadow-black/50">

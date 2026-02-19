@@ -11,7 +11,8 @@ interface GlassFooterProps {
 const productLinks = [
   { label: 'Intelligence Systems', href: '/#services' },
   { label: 'Concierge', href: '/concierge' },
-  { label: 'Creative Studio', href: '/creative-studio' },
+  // CREATIVE STUDIO SHUTDOWN — 2026-02-19
+  // { label: 'Creative Studio', href: '/creative-studio' },
   { label: 'How We Think', href: '/#thinking-layer' },
   { label: 'Book a Call', href: '/#booking' },
 ];
