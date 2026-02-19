@@ -28,11 +28,14 @@ export default function FirmWhyObscura() {
           <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
             <span className="text-xs font-bold tracking-widest text-[#b7d1ea] uppercase">The Problem</span>
           </div>
+          <p className="text-sm font-bold tracking-widest text-[#b7d1ea]/60 uppercase mb-4">
+            Your systems weren&apos;t built for how fast you move.
+          </p>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">
             You want to join the AI race,<br />but don&apos;t know how.
           </h2>
           <p className="text-xl text-white/60 font-light leading-relaxed">
-            Most firms know AI can transform how they operate. But the gap between knowing and doing is where time and money disappear. You need systems, not experiments.
+            Most leaders and firms know AI can transform how they operate. But the gap between knowing and doing is where time and money disappear. You need systems, not experiments.
             <br /><br />
             <span className="text-[#b7d1ea]">That&apos;s what we build.</span>
           </p>

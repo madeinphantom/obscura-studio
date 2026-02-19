@@ -33,6 +33,7 @@ export default function FirmServices() {
       onClick: scrollToBooking,
       gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/20",
     },
+    /* 
     {
       title: "Concierge Services",
       tagline: "Rapid deployment. High-impact sprints.",
@@ -49,6 +50,7 @@ export default function FirmServices() {
       onClick: () => router.push("/concierge"),
       gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/55",
     },
+    */
     // CREATIVE STUDIO SHUTDOWN — 2026-02-19
     // {
     //   title: "Creative Studio",

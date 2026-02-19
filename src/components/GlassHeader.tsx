@@ -12,8 +12,8 @@ interface GlassHeaderProps {
 const navLinks = [
   { label: 'The System', id: 'case-study' },
   { label: 'The Economics', id: 'economics' },
-  { label: 'Services', id: 'services' },
-  { label: 'Concierge', href: '/concierge' },
+  { label: 'What We Build', id: 'services' },
+  // { label: 'Concierge', href: '/concierge' },
 ];
 
 export default function GlassHeader({ className = '' }: GlassHeaderProps) {

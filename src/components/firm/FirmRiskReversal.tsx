@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, Clock, BarChart3, XCircle } from 'lucide-react';
+import { Shield, Clock, BarChart3, XCircle, Lock } from 'lucide-react';
 import GlassCTA from '@/components/GlassCTA';
 import SectionHeader from '@/components/shared/SectionHeader';
 import GlassCard from '@/components/GlassCard';
@@ -25,6 +25,11 @@ export default function FirmRiskReversal() {
       description: "Real-time dashboards showing system performance. No black boxes."
     },
     {
+      icon: <Lock className="w-6 h-6 text-[#b7d1ea]" />,
+      title: "Data Sovereignty",
+      description: "Runs on your hardware. Nothing touches third-party servers unless you choose it."
+    },
+    {
       icon: <XCircle className="w-6 h-6 text-[#b7d1ea]" />,
       title: "30-Day Exit",
       description: "30-day cancellation window. No questions asked."
@@ -41,7 +46,7 @@ export default function FirmRiskReversal() {
         />
 
         {/* Guarantees Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {guarantees.map((item, index) => (
             <GlassCard key={index} className="group">
               <IconCard

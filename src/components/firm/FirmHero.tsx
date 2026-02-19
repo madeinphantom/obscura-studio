@@ -16,13 +16,13 @@ export default function FirmHero() {
         <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-2">
           <span className="text-sm font-bold tracking-widest text-[#b7d1ea] uppercase">AI-Native Firm</span>
         </div>
-        <h1 className="text-3xl md:text-6xl font-bold tracking-tighter text-[#b7d1ea] leading-[0.9]">
+        <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#b7d1ea] leading-[0.9]">
           Private AI Infrastructure<br />
-          For <span className="font-fraunces italic font-light">The Modern Firm .</span>
+          For <span className="font-fraunces italic font-light">The Modern Firm & Its Leaders.</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/60 max-w-xl font-light leading-relaxed">
-          Deploy intelligent systems at scale. Clients report <span className="text-white font-medium">10x efficiency</span> across research, reasoning, and execution.
+          Deploy intelligence that never sleep.<span className="text-white font-medium">10x efficiency</span> across research, reasoning, and execution. 
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -30,13 +30,13 @@ export default function FirmHero() {
              onClick={() => scrollToSection('booking')}
              className="px-8 py-4 bg-[#b7d1ea]/80 text-black font-semibold text-sm tracking-wide uppercase hover:bg-violet-200/40 transition-colors duration-300"
            >
-             Book a Free Strategy Call
+             Request Private Access
            </button>
            <button 
              onClick={() => scrollToSection('services')}
              className="px-8 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold text-sm tracking-wide uppercase transition-colors duration-300"
            >
-             Explore Our Systems
+             What We Build
            </button>
         </div>
       </div>

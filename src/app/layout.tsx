@@ -10,10 +10,23 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://obscura.xyz"),
-  title: "OBSCURA XYZ | AI-Native Firm",
+  metadataBase: new URL("https://obscuraai.xyz"),
+  title: {
+    default: "OBSCURA XYZ — Private AI Intelligence",
+    template: "%s — OBSCURA XYZ",
+  },
   description:
-    "AI-native firm building intelligent infrastructure for the modern firm.",
+    "Private AI infrastructure for the modern firm. Deploy intelligence that never sleeps — 10x efficiency across research, reasoning, and execution.",
+  keywords: [
+    "AI infrastructure",
+    "AI-native firm",
+    "private AI",
+    "enterprise AI",
+    "AI automation",
+    "intelligent systems",
+    "Obscura XYZ",
+    "AI strategy",
+  ],
   icons: {
     icon: [
       { url: "/favicon.png", type: "image/png" },
@@ -24,10 +37,10 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon/site.webmanifest",
   openGraph: {
-    title: "OBSCURA XYZ | AI-Native Firm",
+    title: "OBSCURA XYZ | Private AI Intelligence",
     description:
-      "AI-native firm building intelligent infrastructure for the modern firm.",
-    url: "https://obscura.xyz/",
+      "Private AI infrastructure for the modern firm. Deploy intelligence that never sleeps — 10x efficiency across research, reasoning, and execution.",
+    url: "https://obscuraai.xyz/",
     siteName: "OBSCURA XYZ",
     locale: "en_US",
     type: "website",
@@ -36,20 +49,27 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "OBSCURA XYZ",
+        alt: "OBSCURA XYZ | Private AI infrastructure for the modern firm and its leaders.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OBSCURA XYZ | AI-Native Firm",
+    title: "OBSCURA XYZ | Private AI Infrastructure",
     description:
-      "AI-native firm building intelligent infrastructure for the modern firm.",
+      "Deploy intelligence that never sleeps. Private AI for the modern firm — 10x across research, reasoning, and execution.",
     images: ["/og-image.png"],
+    site: "@obscuraxyz",
+    creator: "@obscuraxyz",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
   },
 };
 
