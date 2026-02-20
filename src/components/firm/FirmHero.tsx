@@ -16,12 +16,12 @@ export default function FirmHero() {
         <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-2">
           <span className="text-sm font-bold tracking-widest text-[#b7d1ea] uppercase">AI-Native Firm</span>
         </div>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-[#b7d1ea] leading-[1.1]">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#b7d1ea] leading-[1.1]">
           Private AI Infrastructure For<br />
-          <span className="font-fraunces italic font-light text-white">The Modern Firm.</span>
+          <span className="font-fraunces italic font-light text-[#b7d1ea]">The Modern Firm.</span>
         </h1>
 
-        <p className="text-base md:text-lg text-white/60 max-w-xl font-light leading-relaxed">
+        <p className="text-lg md:text-xl text-white/60 max-w-xl font-light leading-relaxed">
           Intelligence that never sleeps, for firms and the leaders behind them. <span className="text-white font-medium">10x efficiency</span> across research, reasoning and execution.
         </p>
         
