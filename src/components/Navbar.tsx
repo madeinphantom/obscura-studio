@@ -26,9 +26,10 @@ export default function Navbar() {
     }
   };
 
-  const navigateToStudio = () => {
-    router.push('/creative-studio');
-  };
+  // CREATIVE STUDIO SHUTDOWN — 2026-02-19
+  // const navigateToStudio = () => {
+  //   router.push('/creative-studio');
+  // };
 
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center pointer-events-none">
@@ -47,12 +48,14 @@ export default function Navbar() {
           <button onClick={() => handleNavigation('how-it-works')} className="px-5 py-2 rounded-full text-xs font-[var(--font-body)] text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
             How It Works
           </button>
+          {/* CREATIVE STUDIO SHUTDOWN — 2026-02-19
           <button onClick={navigateToStudio} className="px-5 py-2 rounded-full text-xs font-[var(--font-body)] text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-2 group">
             Creative Studio
             <span className="px-1.5 py-0.5 text-[0.65rem] font-bold bg-violet-500/20 text-violet-200 border border-violet-500/30 rounded-full group-hover:bg-violet-500/30 transition-colors">
               NEW
             </span>
           </button>
+          */}
           <button onClick={() => handleNavigation('booking')} className="px-5 py-2 rounded-full text-xs font-[var(--font-body)] text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300">
             Book a Call
           </button>

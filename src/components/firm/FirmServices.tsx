@@ -24,47 +24,31 @@ export default function FirmServices() {
       price: "Custom Scope",
       description: "",
       details: [
-        "Deal research & ranking",
-        "Document processing pipelines",
-        "Competitive intelligence",
-        "Agent orchestration",
+        "Custom agent orchestration (RAG, Vector embeddings)",
+        "Document processing & deal research pipelines",
+        "CRM integration & proprietary skills graph",
+        "Deployed on secure private infrastructure",
       ],
-      cta: "Book a Free Strategy Call",
+      cta: "Request Private Access",
       onClick: scrollToBooking,
       gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/20",
     },
     {
-      title: "Concierge Services",
-      tagline: "Rapid deployment. High-impact sprints.",
-      layer: "SPRINTS",
-      price: "Sprint Basis",
+      title: "Private Intelligence",
+      tagline: "A 24/7 Chief of Staff for your portfolio and life.",
+      layer: "LEADERS",
+      price: "Fraction of a Hire",
       description: "",
       details: [
-        "AI sprints — 1 week delivery",
-        "System builds — 2 week delivery",
-        "Managed support — ongoing",
-        "Visible pricing, fast turnaround",
+        "Deployed directly to your WhatsApp & Telegram",
+        "Monitors entities, deals, and deadlines 24/7",
+        "Managed hosting, continuous updates, zero setup",
+        "Absolute data sovereignty — nothing leaves your control",
       ],
-      cta: "View Concierge",
-      onClick: () => router.push("/concierge"),
-      gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/55",
-    },
-    {
-      title: "Creative Studio",
-      tagline: "Generative assets. Capped monthly access.",
-      layer: "CREATIVE",
-      price: "Membership",
-      description: "",
-      details: [
-        "Product mockups",
-        "Ad creatives",
-        "Programmatic video",
-        "By invitation only",
-      ],
-      cta: "Explore Studio",
-      onClick: () => router.push("/creative-studio"),
-      gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/55",
-    },
+      cta: "Request Private Access",
+      onClick: scrollToBooking,
+      gradient: "from-[#b7d1ea]/55 to-[#b7d1ea]/20",
+    }
   ];
 
   return (
@@ -78,11 +62,11 @@ export default function FirmServices() {
             Join The AI Race Now.
           </h2>
           <p className="text-lg text-white/50 font-light max-w-2xl">
-            One firm. Three ways to work with us, depending on what you need and how fast you need it.
+            Deploy intelligence across two distinct vectors: the firm's operations, and the leaders who run it.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <PortalCard
               key={index}

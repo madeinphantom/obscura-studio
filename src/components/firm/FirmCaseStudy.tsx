@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { X, Check, Building2, FileSearch, Cpu } from 'lucide-react';
+import { X, Check, Building2, FileSearch, Cpu, MessageCircle } from 'lucide-react';
 import GlassCard from '@/components/GlassCard';
 import GlassCTA from '@/components/GlassCTA';
 
@@ -22,6 +22,12 @@ export default function FirmCaseStudy() {
   ];
 
   const outcomes = [
+    {
+      icon: <MessageCircle className="w-6 h-6 text-[#b7d1ea]" />,
+      label: "Private Intelligence Layer",
+      headline: "One Thread. Total Visibility.",
+      description: "A portfolio operator was running 4 entities across 3 time zones. Updates scattered across WhatsApp groups, email threads, and spreadsheets. We deployed a private intelligence layer that monitors everything, surfaces what matters, and responds in a single thread. He messages it like a chief of staff. It never sleeps."
+    },
     {
       icon: <Building2 className="w-6 h-6 text-[#b7d1ea]" />,
       label: "Deal Research System",

@@ -108,9 +108,9 @@ export default function ObscuraBrandLogo({
   const textColor = theme === 'light' ? '#b7d1ea' : '#000000'
 
   // Refined dimensions for mobile vs desktop
-  const iconSize = isHeader ? 'clamp(40px, 8vw, 60px)' : 'clamp(100px, 20vw, 150px)';
-  const fontSize = isHeader ? 'clamp(1.2rem, 3.5vw, 1.5rem)' : 'clamp(2.5rem, 8vw, 4rem)';
-  const gap = isHeader ? 'clamp(-8px, -1.5vw, -10px)' : 'clamp(-15px, -3vw, -20px)';
+  const iconSize = isHeader ? 'clamp(48px, 8vw, 76px)' : 'clamp(100px, 20vw, 150px)';
+  const fontSize = isHeader ? 'clamp(1.4rem, 4vw, 1.8rem)' : 'clamp(2.5rem, 8vw, 4rem)';
+  const gap = isHeader ? 'clamp(-10px, -2vw, -14px)' : 'clamp(-15px, -3vw, -20px)';
   const marginTop = isHeader ? '-1px' : '-2px';
 
   return (

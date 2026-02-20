@@ -8,12 +8,11 @@ interface GlassHeaderProps {
   className?: string;
 }
 
-// Navigation links — value architecture
 const navLinks = [
   { label: 'The System', id: 'case-study' },
   { label: 'The Economics', id: 'economics' },
-  { label: 'Services', id: 'services' },
-  { label: 'Concierge', href: '/concierge' },
+  { label: 'What We Build', id: 'services' },
+  { label: 'FAQ', id: 'faq' },
 ];
 
 export default function GlassHeader({ className = '' }: GlassHeaderProps) {
@@ -47,7 +46,7 @@ export default function GlassHeader({ className = '' }: GlassHeaderProps) {
   };
 
   return (
-    <header className={`w-full fixed top-0 left-0 right-0 z-50 ${className}`}>
+    <header className={`w-full fixed top-0 left-0 right-0 z-60 ${className}`}>
       <div className="bg-[#b7d1ea]/10 backdrop-blur-2xl border-b border-white/25">
         <div className="w-full max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
           <div className="flex items-center justify-between gap-2">
@@ -78,7 +77,7 @@ export default function GlassHeader({ className = '' }: GlassHeaderProps) {
               onClick={() => handleNavigation({ label: 'Book', id: 'booking' })}
               className="px-3 py-2 md:px-5 md:py-2.5 bg-[#b7d1ea]/80 text-black text-[11px] md:text-sm font-semibold rounded-none hover:bg-violet-200/40 transition-colors whitespace-nowrap"
             >
-              Book Free Strategy Call
+              REQUEST PRIVATE ACCESS
             </button>
 
           </div>
