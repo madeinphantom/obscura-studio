@@ -29,27 +29,28 @@ export default function FirmAnchor() {
     return () => clearInterval(timer);
   }, []);
 
-  const socialProof = [
-    "Skipped a $150k hire. ROI in month one.",
-    "Streamlined research from 2 days to 2 hours.",
-    "Saved 15 hours/week across the team.",
-    "Deployed in 48 hours. Zero training needed.",
-    "Reclaimed $10k/month in lost capacity."
+  const systemOutcomes = [
+    "48-hour deployment. Zero training required.",
+    "Research time cut from 2 days to 2 hours.",
+    "15+ hours recovered per week.",
+    "Replaces $150k+ annual hiring cost.",
+    "Recovers $10k+ monthly capacity."
   ];
 
   const testimonials = [
     {
-      quote: "We were drowning in customer support tickets. Obscura built us an AI triage system that cut response time by 60%. Shipped in a day.",
+      quote: "Obscura built me a system that turned weeks of scattered client documents into something I could actually search and use. What used to take hours of digging now takes seconds. I didn't have to explain anything twice — they understood the problem before I finished describing it.",
       author: "Jennifer Klou",
-      role: "Founder",
+      role: "Chartered Accountant & Founder",
       company: "Money Mindful",
       location: "London"
     },
     {
       quote: "Needed our research docs searchable and queryable. They built a custom AI assistant that actually understands our domain. We stopped digging through 100+ PDFs.",
       author: "Naphtali Walz",
-      role: "CTO",
-      company: "NEXUS AI",
+      role: "Co-founder",
+      company: "Nexus AI",
+      companyLink: "https://nexusai.studio",
       location: "Hamburg"
     }
   ];
@@ -96,19 +97,19 @@ export default function FirmAnchor() {
                   <div className="text-4xl md:text-5xl font-bold text-[#b7d1ea]">
                     A fraction of the cost
                   </div>
-                  <div className="text-xl text-[#b7d1ea]/80">Week 1</div>
+                  <div className="text-xl text-[#b7d1ea]/80">Deployed in Weeks</div>
                 </div>
               </div>
 
             </div>
           </div>
 
-          {/* Right Column: Social Proof Stream */}
+          {/* Right Column: System Outcomes */}
           <div className="lg:pl-12">
             <div className="space-y-3">
-              <h3 className="text-sm font-medium text-white/40 uppercase tracking-wide mb-6">What clients are saying</h3>
-              
-              {socialProof.map((message, index) => (
+              <h3 className="text-sm font-medium text-white/40 uppercase tracking-wide mb-6">What our systems deliver</h3>
+
+              {systemOutcomes.map((message, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -146,7 +147,13 @@ export default function FirmAnchor() {
                    <div>
                      <p className="text-white font-semibold">{item.author}</p>
                      <p className="text-sm text-white/60 line-clamp-1">
-                       {item.role}, {item.company} <span className="text-white/30 mx-1">•</span> {item.location}
+                       {item.role}, {item.companyLink ? (
+                         <a href={item.companyLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#b7d1ea] transition-colors">
+                           {item.company}
+                         </a>
+                       ) : (
+                         item.company
+                       )} <span className="text-white/30 mx-1">•</span> {item.location}
                      </p>
                    </div>
                  </div>

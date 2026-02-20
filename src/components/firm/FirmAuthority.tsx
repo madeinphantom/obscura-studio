@@ -12,25 +12,25 @@ export default function FirmAuthority() {
       icon: <Zap className="w-8 h-8 text-[#b7d1ea]" />,
       stat: "10,000+",
       unit: "iterations/hour",
-      description: "Generative capacity at infrastructure scale"
+      description: "Scenario analysis at scale. Explore options in minutes, not weeks."
     },
     {
       icon: <Clock className="w-8 h-8 text-[#b7d1ea]" />,
       stat: "Sub-second",
       unit: "latency",
-      description: "Real-time intelligence, zero lag"
+      description: "Instant answers. Intelligence on demand, not delayed reporting."
     },
     {
       icon: <Rocket className="w-8 h-8 text-[#b7d1ea]" />,
       stat: "Day 1",
       unit: "deployment",
-      description: "Zero ramp time, instant access"
+      description: "Operational impact immediately. No months of setup or training."
     },
     {
       icon: <Shield className="w-8 h-8 text-[#b7d1ea]" />,
       stat: "99.9%",
       unit: "uptime SLA",
-      description: "Enterprise-grade infrastructure"
+      description: "24/7 monitoring never stops. Critical alerts never missed."
     }
   ];
 

@@ -8,12 +8,11 @@ interface GlassHeaderProps {
   className?: string;
 }
 
-// Navigation links — value architecture
 const navLinks = [
   { label: 'The System', id: 'case-study' },
   { label: 'The Economics', id: 'economics' },
   { label: 'What We Build', id: 'services' },
-  // { label: 'Concierge', href: '/concierge' },
+  { label: 'FAQ', id: 'faq' },
 ];
 
 export default function GlassHeader({ className = '' }: GlassHeaderProps) {

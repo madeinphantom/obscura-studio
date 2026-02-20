@@ -28,7 +28,7 @@ export default function FirmBooking() {
         </div>
         <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">Ready to <span className="font-fraunces italic font-light">deploy intelligence?</span></h2>
         <p className="text-xl text-white/60 font-light leading-relaxed max-w-2xl mx-auto">
-          Book a complimentary strategy session. We&apos;ll audit your current workflow and map out exactly where AI adds the most leverage. Actionable roadmap, guaranteed.
+          Request private access. We&apos;ll audit your current workflow and map out exactly where AI adds the most leverage. Actionable roadmap, guaranteed.
         </p>
       </div>
       

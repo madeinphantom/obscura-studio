@@ -10,6 +10,7 @@ import FirmCaseStudy from "@/components/firm/FirmCaseStudy";
 import FirmSystem from "@/components/firm/FirmSystem";
 import FirmRiskReversal from "@/components/firm/FirmRiskReversal";
 import FirmServices from "@/components/firm/FirmServices";
+import FirmFAQ from "@/components/firm/FirmFAQ";
 import FirmBooking from "@/components/firm/FirmBooking";
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function Home() {
       <FirmRiskReversal />
       <FirmServices />
       <FirmBooking />
+      <FirmFAQ />
       <GlassFooter />
     </main>
   );

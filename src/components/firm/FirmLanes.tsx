@@ -87,6 +87,7 @@ export default function FirmLanes() {
                   'Advanced AI system architecture',
                   'Deal research & competitive intelligence',
                   'Document processing pipelines',
+                  'Spin up an army of custom AI employees',
                   'Agent orchestration & automation',
                   'Managed operations & ongoing support',
                 ].map((item) => (
@@ -101,7 +102,7 @@ export default function FirmLanes() {
               onClick={scrollToBooking}
               className="self-start px-8 py-4 border border-white/20 text-black font-semibold text-sm tracking-wide uppercase hover:bg-white/10 hover:text-white transition-colors duration-300 bg-white/80"
             >
-              Book Strategy Call
+              Request Private Access
             </button>
           </motion.div>
 
